@@ -39,8 +39,8 @@
   gtag('config', 'G-WLMRJ211ES');
 </script>
 <style>
-  @font-face{font-family:'TT Bluescreens';src:url('../fonts/tt-bluescreens-bold.otf') format('opentype');font-weight:700;font-style:normal;font-display:swap;}
-  :root{--graphite:#1F1F1F;--tan:#C9A57E;--tan-hover:#D4B493;--forest:#3B4A3F;--ivory:#F5EFE6;--charcoal:#6E7378;--display:'TT Bluescreens','Oswald','Arial Narrow',sans-serif;--body:'Inter',system-ui,sans-serif;}
+  @font-face {font-family:'TT Bluescreens';src:url('../fonts/tt-bluescreens-bold.otf') format('opentype');font-weight:700;font-style:normal;font-display:swap;}
+  :root {--graphite:#1F1F1F;--tan:#C9A57E;--tan-hover:#D4B493;--forest:#3B4A3F;--ivory:#F5EFE6;--charcoal:#6E7378;--display:'TT Bluescreens','Oswald','Arial Narrow',sans-serif;--body:'Inter',system-ui,sans-serif;}
   *{box-sizing:border-box;}html{scroll-behavior:smooth;}
   body{margin:0;background:var(--graphite);color:var(--ivory);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
   img{max-width:100%;display:block;}a{color:inherit;text-decoration:none;}
@@ -89,16 +89,15 @@
   @media(max-width:600px){.includes{grid-template-columns:1fr;}}
   .includes li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:rgba(245,239,230,0.85);}
   .includes li::before{content:'✓';color:var(--tan);font-weight:700;flex-shrink:0;}
-  .photo-strip{display:grid;grid-template-columns:2fr 1fr 1fr;gap:6px;margin:56px 0;}
+  .photo-strip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin:56px 0;}
   .photo-strip .ps-item{overflow:hidden;aspect-ratio:4/3;}
-  .photo-strip .ps-item:first-child{aspect-ratio:auto;}
   .photo-strip img{width:100%;height:100%;object-fit:cover;transition:transform 600ms;}
   .photo-strip .ps-item:hover img{transform:scale(1.05);}
-  @media(max-width:700px){.photo-strip{grid-template-columns:1fr 1fr;}.photo-strip .ps-item:first-child{grid-column:span 2;aspect-ratio:16/9;}}
+  @media(max-width:700px){.photo-strip{grid-template-columns:1fr 1fr;}}
   .enquire-box{background:#161616;border:1px solid rgba(201,165,126,0.25);padding:48px;text-align:center;margin-top:40px;}
-  .enquire-box .eb-label{font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--charcoal);margin-bottom:16px;}
-  .enquire-box .eb-title{font-family:var(--display);font-size:clamp(36px,5vw,64px);color:var(--ivory);line-height:1;margin:0 0 12px;}
-  .enquire-box .eb-note{font-size:15px;color:rgba(245,239,230,0.6);margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto;}
+  .enquire-box .eb-label{font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--charcoal);}
+  .enquire-box .eb-price{font-family:var(--display);font-size:clamp(40px,6vw,72px);color:var(--tan);line-height:1;margin:12px 0;}
+  .enquire-box .eb-note{font-size:14px;color:rgba(245,239,230,0.6);margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto;}
   .btn-group{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
   .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;font-family:var(--body);font-weight:600;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;border:none;cursor:pointer;transition:all 240ms cubic-bezier(.22,.61,.36,1);background:var(--tan);color:var(--graphite);}
   .btn:hover{background:var(--tan-hover);transform:translateY(-2px);}
@@ -124,8 +123,7 @@
   .footer-links a:hover{color:var(--tan);}
   .footer-bottom{padding-top:28px;border-top:1px solid rgba(245,239,230,0.06);font-size:11px;color:rgba(245,239,230,0.3);letter-spacing:0.06em;}
   @media(max-width:768px){.container{padding:0 20px;}.tour-body{padding:64px 0;}.block{margin-bottom:56px;}.enquire-box{padding:32px 24px;}.history{padding-left:20px;}}
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity 700ms cubic-bezier(.22,.61,.36,1),transform 700ms cubic-bezier(.22,.61,.36,1);}
-  .reveal.in{opacity:1;transform:none;}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity 700ms cubic-bezier(.22,.61,.36,1),transform 700ms cubic-bezier(.22,.61,.36,1);}.reveal.in{opacity:1;transform:none;}
 </style>
 </head>
 <body>
@@ -135,6 +133,7 @@
     ym(109271119,'init',{ssr:true,webvisor:true,clickmap:true,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/109271119" style="position:absolute;left:-9999px;" alt=""/></div></noscript>
+<!-- /Yandex.Metrika counter -->
 <nav class="nav">
   <div class="container nav-row">
     <a href="../en.html" class="logo">ASFERIA<span>·</span>ADVENTURE</a>
@@ -159,10 +158,52 @@
   </div>
 </header>
 <section class="facts"><div class="container"><div class="facts-grid"><div class="fact"><div class="label">Duration</div><div class="value">1 day</div></div><div class="fact"><div class="label">Altitude</div><div class="value tan">~1800 m</div></div><div class="fact"><div class="label">Road</div><div class="value">Moderate</div></div><div class="fact"><div class="label">Season</div><div class="value">May–Sept</div></div></div></div></section>
-<main class="tour-body"><div class="container"><div class="block reveal"><div class="eyebrow section-label">About</div><h2>Panorama over<br>the Ivanovsky Ridge</h2>
-<p class="lead">Zvezdny Pass is a day route of moderate difficulty along the Uba River valley — an old logging road that climbs to a plateau at roughly 1,800 metres with sweeping views in every direction.</p>
-<p>This is the tour for those who love <strong>photography, panoramic views and history</strong> without needing to tackle extreme off-road. The road is manageable, the rewards are considerable.</p></div><div class="photo-strip reveal"><div class="ps-item"><img src="../assets/photo-zvezdny.jpg" alt="Panorama from Zvezdny Pass"></div><div class="ps-item"><img src="../assets/photo-zvezdny-2.jpg" alt="Uba River valley"></div><div class="ps-item"><img src="../assets/photo-zvezdny-3.jpg" alt="View over the Ivanovsky Ridge"></div></div></main>
+<main class="tour-body">
+  <div class="container">
+<div class="block reveal">
+  <div class="eyebrow section-label">About</div>
+  <h2>Panorama over<br>the Ivanovsky Ridge</h2>
+  <p class="lead">Zvezdny Pass is a day route of moderate difficulty along the Uba River valley — an old logging road that climbs to a plateau at <strong>roughly 1,800 metres</strong> with sweeping views in every direction.</p>
+  <p>This is the tour for those who love <strong>photography, panoramic views and history</strong> without tackling extreme off-road. The road is manageable, the rewards are considerable.</p>
+</div>
+<div class="photo-strip reveal">
+  <div class="ps-item"><img src="../assets/photo-zvezdny.jpg" alt="Panorama from Zvezdny Pass"></div>
+  <div class="ps-item"><img src="../assets/photo-zvezdny-2.jpg" alt="Uba River valley"></div>
+  <div class="ps-item"><img src="../assets/photo-zvezdny-3.jpg" alt="View over the Ivanovsky Ridge"></div>
+</div>
+<div class="block reveal">
+  <div class="eyebrow section-label">Along the way</div>
+  <h2>Old-Believer villages<br>and a mountain plateau</h2>
+  <p>En route we visit <strong>Yermolayevka and 8 Marta</strong> — Old Believer villages founded in the 18th century by religious dissenters fleeing the Nikonian reforms. Novosnoy Bridge over the Uba River is another stop.</p>
+  <p>The finale: the Zvezdny Pass plateau with its 360° panorama of the <strong>Ivanovsky Ridge</strong>. A perfect spot for photography — or simply standing still and taking it all in.</p>
+  <div class="history">
+    <div class="h-label">Historical note</div>
+    <p>The Old Believer settlements in the Uba valley are among the oldest in the region. Established in the mid-18th century by communities fleeing state religious reform, they preserved a way of life almost unchanged for generations.</p>
+  </div>
+</div>
+<div class="block reveal">
+  <div class="eyebrow section-label">What's included</div>
+  <h2>Forest<br>all-inclusive</h2>
+  <p>The tour price covers everything you need — just show up at the meeting point.</p>
+  <ul class="includes"><li>Transfer in a prepared 4×4 vehicle</li><li>Certified Category I guide</li><li>Hot meals on the route</li><li>Camp canopy, furniture & tableware</li><li>Rain gear for all weather</li><li>All permits and logistics</li></ul>
+</div>
+<div class="block reveal">
+  <div class="eyebrow section-label">Meeting point</div>
+  <h2>Departure</h2>
+  <p>Departure from <strong>Ridder</strong>, pick-up at Café Krem, 6 Gagarina Street. We leave at <strong>9:00 AM</strong>. Transfer from Ust-Kamenogorsk available on request — ask your manager.</p>
+</div>
+<div class="enquire-box reveal">
+  <div class="eb-label">Pricing & Availability</div>
+  <div class="eb-price">from <strong>$60</strong> per person</div>
+  <div class="eb-note">4 people · all-inclusive · panoramic day tour<br><br>Contact us for exact pricing based on your group and dates — we reply within one hour.</div>
+  <div class="btn-group">
+    <a href="../en.html#booking" class="btn">Send enquiry <span class="arrow">→</span></a>
+    <a href="https://wa.me/77770650260" class="btn btn--ghost">WhatsApp</a>
+  </div>
+</div>
 <section class="more-tours"><div class="container"><h3>Other routes</h3><div class="mt-grid"><a class="mt-card" href="radon-lake.html"><div class="mt-bg" style="background-image:url('../assets/photo-radonlake.jpg');"></div><div class="mt-scrim"></div><div class="mt-name">Radon<br>Lake</div></a><a class="mt-card" href="bogdanikha-river-mouth.html"><div class="mt-bg" style="background-image:url('../assets/photo-bogdaniha.jpg');"></div><div class="mt-scrim"></div><div class="mt-name">Bogdanikha<br>River Mouth</div></a><a class="mt-card" href="maloulba-reservoir.html"><div class="mt-bg" style="background-image:url('../assets/photo-maloulba.jpg');"></div><div class="mt-scrim"></div><div class="mt-name">Maloulskoye<br>Reservoir</div></a></div></div></section>
+  </div>
+</main>
 <footer class="footer">
   <div class="container">
     <div class="footer-row">
@@ -186,7 +227,7 @@
     <div class="footer-bottom">© 2026 Asferia Adventure · Licensed tour operator · Kazakhstan</div>
   </div>
 </footer>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristTrip","name":"Zvezdny Pass Jeep Tour","description":"Day jeep tour to Zvezdny Pass (1800 m), East Kazakhstan. Panoramic views of Ivanovsky Ridge, 18th-century Old Believer villages, moderate off-road.","image":"https://asferia.kz/assets/photo-zvezdny.jpg","provider":{"@type":"TravelAgency","name":"Asferia Adventure","url":"https://asferia.kz/en.html","telephone":"+7-777-065-02-60"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristTrip","name":"Zvezdny Pass Jeep Tour","description":"Day jeep tour to Zvezdny Pass (1800 m). Panoramic views of Ivanovsky Ridge, 18th-century Old Believer villages, moderate off-road.","image":"https://asferia.kz/assets/photo-zvezdny.jpg","provider":{"@type":"TravelAgency","name":"Asferia Adventure","url":"https://asferia.kz/en.html","telephone":"+7-777-065-02-60"}}</script>
 <script>
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });

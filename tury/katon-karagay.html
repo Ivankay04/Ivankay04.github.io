@@ -104,12 +104,11 @@
   @media(max-width:600px) { .includes { grid-template-columns:1fr; } }
   .includes li { display:flex; align-items:flex-start; gap:12px; font-size:15px; color:rgba(245,239,230,0.85); }
   .includes li::before { content:'✓'; color:var(--tan); font-weight:700; flex-shrink:0; }
-  .photo-strip { display:grid; grid-template-columns:2fr 1fr 1fr; gap:6px; margin:56px 0; }
+  .photo-strip { display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; margin:56px 0; }
   .photo-strip .ps-item { overflow:hidden; aspect-ratio:4/3; }
-  .photo-strip .ps-item:first-child { aspect-ratio:auto; }
   .photo-strip img { width:100%; height:100%; object-fit:cover; transition:transform 600ms; }
   .photo-strip .ps-item:hover img { transform:scale(1.05); }
-  @media(max-width:700px) { .photo-strip { grid-template-columns:1fr 1fr; } .photo-strip .ps-item:first-child { grid-column:span 2; aspect-ratio:16/9; } }
+  @media(max-width:700px) { .photo-strip { grid-template-columns:1fr 1fr; } }
   .price-box { background:#161616; border:1px solid rgba(201,165,126,0.25); padding:48px; text-align:center; margin-top:40px; }
   .price-box .pb-label { font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); }
   .price-box .pb-price { font-family:var(--display); font-size:clamp(48px,7vw,88px); color:var(--tan); line-height:1; margin:12px 0; }
@@ -170,14 +169,83 @@
 <header class="tour-hero">
   <div class="tour-hero-bg" style="background-image:url('../assets/photo-katon.jpg');"></div>
   <div class="container tour-hero-content">
-    <div class="breadcrumb"><a href="../index.html">Главная</a> / <a href="../index.html#tours">Направления</a> / <span>Катон- Карагай</span></div>
+    <div class="breadcrumb"><a href="../index.html">Главная</a> / <a href="../index.html#tours">Направления</a> / <span>Катон-Карагай</span></div>
     <div class="eyebrow">Сезон 2026 · Asferia Adventure</div>
     <h1>Катон-<br>Карагай</h1>
     <div class="tour-tags"><span class="tour-tag accent">Флагманская экспедиция</span><span class="tour-tag">4–6 дней</span><span class="tour-tag">Гибкий маршрут</span><span class="tour-tag">Маркаколь · Рахмановские ключи</span></div>
   </div>
 </header>
-<section class="facts"><div class="container"><div class="facts-grid"><div class="fact"><div class="label">Длительность</div><div class="value">4–6 дней</div></div><div class="fact"><div class="label">Программа</div><div class="value tan">Гибкая</div></div><div class="fact"><div class="label">Проживание</div><div class="value">Дом / Палатки</div></div><div class="fact"><div class="label">Сезон</div><div class="value">Июнь — Сент.</div></div></div></div></section>
-<main class="tour-body"><div class="container"><div class="block reveal"><div class="eyebrow section-label">О маршруте</div><h2>Флагманская<br>экспедиция</h2><p>Катон-Карагай — наша самая масштабная программа. <strong>Катон-Карагайский национальный парк</strong> — мечта любого, кто по-настоящему любит Казахстан: озеро Маркаколь, Рахмановские ключи, перевал Радостный, озеро Язевое.</p><p>Маршрут полностью гибкий: выбираете продолжительность и формат проживания — <strong>гостевые дома или палаточный лагерь</strong>. Плюс от нашей команды — оффроуд-маршруты туда, куда большинство туров не заезжает.</p></div><div class="photo-strip reveal"><div class="ps-item"><img src="../assets/photo-katon.jpg" alt="Катон-Карагайский национальный парк"></div><div class="ps-item"><img src="../assets/photo-katon-2.jpg" alt="Горные озёра Катон-Карагая"></div><div class="ps-item"><img src="../assets/photo-katon-3.jpg" alt="Рахмановские ключи"></div></div>
+<section class="facts"><div class="container"><div class="facts-grid">
+  <div class="fact"><div class="label">Длительность</div><div class="value">4–6 дней</div></div><div class="fact"><div class="label">Программа</div><div class="value tan">Гибкая</div></div><div class="fact"><div class="label">Проживание</div><div class="value">Дом / Палатки</div></div><div class="fact"><div class="label">Сезон</div><div class="value">Июнь — Сент.</div></div>
+</div></div></section>
+<main class="tour-body">
+  <div class="container">
+<div class="block reveal">
+  <div class="eyebrow section-label">О маршруте</div>
+  <h2>Флагманская<br>экспедиция</h2>
+  <p class="lead">Катон-Карагай — наша самая масштабная программа. <strong>Катон-Карагайский национальный парк</strong> — мечта любого, кто по-настоящему любит Казахстан: озеро Маркаколь, Рахмановские ключи, перевал Радостный, озеро Язевое.</p>
+  <p>Маршрут полностью гибкий: выбираете продолжительность и формат проживания — <strong>гостевые дома или палаточный лагерь</strong>. Плюс от нашей команды — оффроуд-маршруты туда, куда большинство туров не заезжает.</p>
+</div>
+<div class="photo-strip reveal">
+  <div class="ps-item"><img src="../assets/photo-katon.jpg" alt="Катон-Карагайский национальный парк"></div>
+  <div class="ps-item"><img src="../assets/photo-katon-2.jpg" alt="Горные озёра Катон-Карагая"></div>
+  <div class="ps-item"><img src="../assets/photo-katon-3.jpg" alt="Рахмановские ключи"></div>
+</div>
+<div class="block reveal">
+  <div class="eyebrow section-label">Программа</div>
+  <h2>Лучшее<br>Восточного Казахстана</h2>
+  <p><strong>Озеро Маркаколь</strong> — один из крупнейших горных резерватов страны, место гнездования редких птиц и обитания эндемичной рыбы — ускуча. Нетронутая природа заповедника.</p>
+  <p><strong>Рахмановские ключи</strong> — термальные источники с радоновой водой в окружении гор на высоте 1700 м. <strong>Перевал Радостный</strong> и <strong>озеро Язевое</strong> — открыточные виды Алтая, которые невозможно описать словами.</p>
+</div>
+<div class="block reveal">
+  <div class="eyebrow section-label">Что включено</div>
+  <h2>Лесной<br>all-inclusive</h2>
+  <p>Стоимость тура полностью покрывает всё необходимое — вам остаётся только приехать к точке сбора.</p>
+  <ul class="includes"><li>Трансфер на подготовленном внедорожнике</li><li>Сертифицированный гид</li><li>Горячее питание весь маршрут</li><li>Палатки, спальники, карематы</li><li>Треккинговые палки, аптечка</li><li>Дождевики, лагерное снаряжение</li><li>Тенты-маркизы, походная мебель</li><li>Все разрешения и организация</li></ul>
+</div>
+<div class="block reveal">
+  <div class="eyebrow section-label">Сбор группы</div>
+  <h2>Отправление</h2>
+  <p>Выезд из города <strong>Риддер</strong>, посадка у кафе «Крем», ул. Гагарина 6. Время отправления согласовывается индивидуально. Возможен трансфер из Усть-Каменогорска — уточните у менеджера.</p>
+</div>
+<div class="price-box reveal">
+  <div class="pb-label">Стоимость тура</div>
+  <div class="pb-price">от 160 000 ₸</div>
+  <div class="pb-note">с человека · программа и сроки составляются индивидуально · гибкий маршрут</div>
+  <a href="../index.html#booking" class="btn">Забронировать тур <span class="arrow">→</span></a>
+</div>
+<section class="more-tours"><div class="container">
+  <h3>Другие направления</h3>
+  <div class="mt-grid"><a class="mt-card" href="radonovoe-ozero.html"><div class="mt-bg" style="background-image:url('../assets/photo-radonlake.jpg');"></div><div class="mt-scrim"></div><div class="mt-name">Радоновое<br>озеро</div></a><a class="mt-card" href="maloulbinskoe.html"><div class="mt-bg" style="background-image:url('../assets/photo-maloulba.jpg');"></div><div class="mt-scrim"></div><div class="mt-name">Малоульбинское<br>водохранилище</div></a><a class="mt-card" href="ubinsky-vodopad.html"><div class="mt-bg" style="background-image:url('../assets/photo-waterfall.jpg');"></div><div class="mt-scrim"></div><div class="mt-name">Убинский<br>водопад</div></a></div>
+</div></section>
+  </div>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-row">
+      <div>
+        <div class="logo">ASFERIA<span>·</span>ADVENTURE</div>
+        <div class="tag">Джип-туры и экспедиции по Восточному Казахстану.</div>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h5>Навигация</h5>
+          <ul>
+            <li><a href="../index.html#tours">Направления</a></li>
+            <li><a href="../index.html#about">О нас</a></li>
+            <li><a href="../index.html#team">Команда</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Контакты</h5>
+          <ul>
+            <li><a href="https://wa.me/77770650260">+7 777 065 02 60</a></li>
+            <li><a href="mailto:asferia@mail.ru">asferia@mail.ru</a></li>
+            <li><a href="https://www.instagram.com/asferia_adventure/">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="footer-bottom">© 2026 Asferia Adventure · Лицензированный туроператор · Казахстан</div>
   </div>
 </footer>

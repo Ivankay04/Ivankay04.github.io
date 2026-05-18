@@ -104,12 +104,11 @@
   @media(max-width:600px) { .includes { grid-template-columns:1fr; } }
   .includes li { display:flex; align-items:flex-start; gap:12px; font-size:15px; color:rgba(245,239,230,0.85); }
   .includes li::before { content:'✓'; color:var(--tan); font-weight:700; flex-shrink:0; }
-  .photo-strip { display:grid; grid-template-columns:2fr 1fr 1fr; gap:6px; margin:56px 0; }
+  .photo-strip { display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; margin:56px 0; }
   .photo-strip .ps-item { overflow:hidden; aspect-ratio:4/3; }
-  .photo-strip .ps-item:first-child { aspect-ratio:auto; }
   .photo-strip img { width:100%; height:100%; object-fit:cover; transition:transform 600ms; }
   .photo-strip .ps-item:hover img { transform:scale(1.05); }
-  @media(max-width:700px) { .photo-strip { grid-template-columns:1fr 1fr; } .photo-strip .ps-item:first-child { grid-column:span 2; aspect-ratio:16/9; } }
+  @media(max-width:700px) { .photo-strip { grid-template-columns:1fr 1fr; } }
   .price-box { background:#161616; border:1px solid rgba(201,165,126,0.25); padding:48px; text-align:center; margin-top:40px; }
   .price-box .pb-label { font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:var(--charcoal); }
   .price-box .pb-price { font-family:var(--display); font-size:clamp(48px,7vw,88px); color:var(--tan); line-height:1; margin:12px 0; }
@@ -176,8 +175,81 @@
     <div class="tour-tags"><span class="tour-tag accent">Панорамные виды</span><span class="tour-tag">Однодневный</span><span class="tour-tag">Средняя дорога</span><span class="tour-tag">История · Фото</span></div>
   </div>
 </header>
-<section class="facts"><div class="container"><div class="facts-grid"><div class="fact"><div class="label">Длительность</div><div class="value">1 день</div></div><div class="fact"><div class="label">Высота</div><div class="value tan">~1800 м</div></div><div class="fact"><div class="label">Дорога</div><div class="value">Средняя</div></div><div class="fact"><div class="label">Сезон</div><div class="value">Май — Сент.</div></div></div></div></section>
-<main class="tour-body"><div class="container"><div class="block reveal"><div class="eyebrow section-label">О маршруте</div><h2>Панорама на<br>Ивановский хребет</h2><p>Перевал Звёздный — однодневный маршрут средней сложности вдоль долины реки Уба. Старая дорога лесовозов ведёт на <strong>плато высотой около 1800 метров</strong>, откуда открываются виды на все окружающие хребты.</p><p>Это тур для тех, кто любит <strong>фотографию, панорамные виды и историю</strong> — но не горит желанием покорять экстрим-бездорожье. Дорога здесь умеренная, а впечатления — незабываемые.</p></div><div class="photo-strip reveal"><div class="ps-item"><img src="../assets/photo-zvezdny.jpg" alt="Панорама с перевала Звёздный"></div><div class="ps-item"><img src="../assets/photo-zvezdny-2.jpg" alt="Долина реки Уба"></div><div class="ps-item"><img src="../assets/photo-zvezdny-3.jpg" alt="Вид на Ивановский хребет"></div></div>
+<section class="facts"><div class="container"><div class="facts-grid">
+  <div class="fact"><div class="label">Длительность</div><div class="value">1 день</div></div><div class="fact"><div class="label">Высота</div><div class="value tan">~1800 м</div></div><div class="fact"><div class="label">Дорога</div><div class="value">Средняя</div></div><div class="fact"><div class="label">Сезон</div><div class="value">Май — Сент.</div></div>
+</div></div></section>
+<main class="tour-body">
+  <div class="container">
+<div class="block reveal">
+  <div class="eyebrow section-label">О маршруте</div>
+  <h2>Панорама на<br>Ивановский хребет</h2>
+  <p class="lead">Перевал Звёздный — однодневный маршрут средней сложности вдоль долины реки Уба. Старая дорога лесовозов ведёт на <strong>плато высотой около 1800 метров</strong>, откуда открываются виды на все окружающие хребты.</p>
+  <p>Это тур для тех, кто любит <strong>фотографию, панорамные виды и историю</strong> — но не горит желанием покорять экстрим-бездорожье.</p>
+</div>
+<div class="photo-strip reveal">
+  <div class="ps-item"><img src="../assets/photo-zvezdny.jpg" alt="Панорама с перевала Звёздный на Ивановский хребет"></div>
+  <div class="ps-item"><img src="../assets/photo-zvezdny-2.jpg" alt="Долина реки Уба"></div>
+  <div class="ps-item"><img src="../assets/photo-zvezdny-3.jpg" alt="Виды на окрестные хребты"></div>
+</div>
+<div class="block reveal">
+  <div class="eyebrow section-label">Маршрут</div>
+  <h2>Деревни XVIII века<br>и горное плато</h2>
+  <p>По пути заезжаем к <strong>старообрядческим деревням Ермолаевка и 8 Марта</strong> — их основали беглые раскольники-никонианцы ещё в XVIII веке. Новосной мост через реку Уба — ещё одна точка на маршруте.</p>
+  <p>Финал — выезд на плато перевала Звёздный. Отсюда открывается панорама на <strong>Ивановский хребет</strong> и окрестные горы — идеально для фотосессии.</p>
+  <div class="history">
+    <div class="h-label">Историческая справка</div>
+    <p>Старообрядческие деревни в долине реки Уба — одни из старейших поселений региона. Беглые раскольники, скрывавшиеся от государственных реформ, обосновались здесь в середине XVIII века и сохранили уклад жизни практически в первозданном виде.</p>
+  </div>
+</div>
+<div class="block reveal">
+  <div class="eyebrow section-label">Что включено</div>
+  <h2>Лесной<br>all-inclusive</h2>
+  <p>Стоимость тура полностью покрывает всё необходимое — вам остаётся только приехать к точке сбора.</p>
+  <ul class="includes"><li>Трансфер на подготовленном внедорожнике</li><li>Сертифицированный гид</li><li>Горячее питание на маршруте</li><li>Тенты-маркизы, походная мебель, посуда</li><li>Дождевики на случай непогоды</li><li>Организация и разрешения маршрута</li></ul>
+</div>
+<div class="block reveal">
+  <div class="eyebrow section-label">Сбор группы</div>
+  <h2>Отправление</h2>
+  <p>Выезд из города <strong>Риддер</strong>, посадка у кафе «Крем», ул. Гагарина 6. Отправление в <strong>9:00</strong>. При необходимости организуем трансфер из Усть-Каменогорска — уточните у менеджера.</p>
+</div>
+<div class="price-box reveal">
+  <div class="pb-label">Стоимость тура</div>
+  <div class="pb-price">30 000 ₸</div>
+  <div class="pb-note">с человека (4 чел. в группе) · всё включено</div>
+  <a href="../index.html#booking" class="btn">Забронировать тур <span class="arrow">→</span></a>
+</div>
+<section class="more-tours"><div class="container">
+  <h3>Другие направления</h3>
+  <div class="mt-grid"><a class="mt-card" href="radonovoe-ozero.html"><div class="mt-bg" style="background-image:url('../assets/photo-radonlake.jpg');"></div><div class="mt-scrim"></div><div class="mt-name">Радоновое<br>озеро</div></a><a class="mt-card" href="ustye-bogdaniha.html"><div class="mt-bg" style="background-image:url('../assets/photo-bogdaniha.jpg');"></div><div class="mt-scrim"></div><div class="mt-name">Устье<br>Богданихи</div></a><a class="mt-card" href="maloulbinskoe.html"><div class="mt-bg" style="background-image:url('../assets/photo-maloulba.jpg');"></div><div class="mt-scrim"></div><div class="mt-name">Малоульбинское<br>водохранилище</div></a></div>
+</div></section>
+  </div>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-row">
+      <div>
+        <div class="logo">ASFERIA<span>·</span>ADVENTURE</div>
+        <div class="tag">Джип-туры и экспедиции по Восточному Казахстану.</div>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h5>Навигация</h5>
+          <ul>
+            <li><a href="../index.html#tours">Направления</a></li>
+            <li><a href="../index.html#about">О нас</a></li>
+            <li><a href="../index.html#team">Команда</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Контакты</h5>
+          <ul>
+            <li><a href="https://wa.me/77770650260">+7 777 065 02 60</a></li>
+            <li><a href="mailto:asferia@mail.ru">asferia@mail.ru</a></li>
+            <li><a href="https://www.instagram.com/asferia_adventure/">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="footer-bottom">© 2026 Asferia Adventure · Лицензированный туроператор · Казахстан</div>
   </div>
 </footer>
