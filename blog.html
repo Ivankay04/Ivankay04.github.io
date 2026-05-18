@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Блог Asferia Adventure — туризм в Восточном Казахстане</title>
+<meta name="description" content="Статьи о туризме в Восточном Казахстане: маршруты, советы, места. Блог команды Asferia Adventure из Риддера.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://asferia.kz/blog.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Asferia Adventure">
+<meta property="og:title" content="Блог Asferia Adventure — туризм в Восточном Казахстане">
+<meta property="og:description" content="Статьи о туризме в Восточном Казахстане: маршруты, советы, места.">
+<meta property="og:url" content="https://asferia.kz/blog.html">
+<meta property="og:image" content="https://asferia.kz/assets/photo-website-hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png">
+<meta name="theme-color" content="#1F1F1F">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WLMRJ211ES"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WLMRJ211ES');
+</script>
+<style>
+  @font-face{font-family:'TT Bluescreens';src:url('assets/fonts/tt-bluescreens-bold.otf') format('opentype');font-weight:700;font-style:normal;font-display:swap;}
+  :root{--graphite:#1F1F1F;--tan:#C9A57E;--tan-hover:#D4B493;--forest:#3B4A3F;--ivory:#F5EFE6;--charcoal:#6E7378;--display:'TT Bluescreens','Oswald','Arial Narrow',sans-serif;--body:'Inter',system-ui,sans-serif;}
+  *{box-sizing:border-box;}html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--graphite);color:var(--ivory);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;}a{color:inherit;text-decoration:none;}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--tan);}
+  .container{max-width:1100px;margin:0 auto;padding:0 32px;}
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;background:rgba(20,20,20,0.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(245,239,230,0.08);}
+  .nav-row{display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-family:var(--display);font-size:18px;letter-spacing:0.12em;color:#fff;text-transform:uppercase;}
+  .logo span{color:var(--tan);}
+  .nav-links{display:flex;align-items:center;gap:32px;}
+  .nav-links a{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;opacity:0.75;transition:opacity 240ms,color 240ms;}
+  .nav-links a:hover{opacity:1;color:var(--tan);}
+  .nav-links a.active{opacity:1;color:var(--tan);}
+  .nav-toggle{display:none;background:none;border:0;color:#fff;font-size:22px;cursor:pointer;}
+  @media(max-width:768px){.nav-toggle{display:block;}.nav-links{display:none;flex-direction:column;gap:0;position:absolute;top:100%;left:0;right:0;background:rgba(20,20,20,0.98);padding:16px 0 24px;border-bottom:1px solid rgba(245,239,230,0.08);}.nav-links.open{display:flex;}.nav-links a{padding:12px 32px;width:100%;}}
+
+  /* Blog hero */
+  .blog-hero{padding:160px 0 80px;border-bottom:1px solid rgba(245,239,230,0.08);}
+  .blog-hero h1{font-family:var(--display);font-size:clamp(52px,9vw,120px);line-height:0.92;margin:12px 0 24px;text-transform:uppercase;}
+  .blog-hero .sub{font-size:18px;color:rgba(245,239,230,0.7);max-width:560px;line-height:1.6;}
+
+  /* Post grid */
+  .posts{padding:80px 0 120px;}
+  .posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+  @media(max-width:900px){.posts-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:580px){.posts-grid{grid-template-columns:1fr;}}
+
+  .post-card{display:flex;flex-direction:column;background:#161616;border:1px solid rgba(245,239,230,0.07);transition:border-color 300ms,transform 300ms;}
+  .post-card:hover{border-color:rgba(201,165,126,0.35);transform:translateY(-4px);}
+  .post-card .thumb{aspect-ratio:16/9;overflow:hidden;background:var(--forest);}
+  .post-card .thumb img{width:100%;height:100%;object-fit:cover;transition:transform 500ms;}
+  .post-card:hover .thumb img{transform:scale(1.05);}
+  .post-card .body{padding:28px;flex:1;display:flex;flex-direction:column;}
+  .post-card .meta{display:flex;gap:14px;align-items:center;margin-bottom:12px;}
+  .post-card .date{font-size:11px;letter-spacing:0.14em;color:var(--charcoal);}
+  .post-card .cat{font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;background:rgba(201,165,126,0.12);color:var(--tan);padding:3px 9px;border-radius:20px;}
+  .post-card h2{font-family:var(--display);font-size:22px;line-height:1.1;text-transform:uppercase;margin:0 0 12px;flex:1;}
+  .post-card .excerpt{font-size:14px;color:rgba(245,239,230,0.65);line-height:1.55;margin-bottom:20px;}
+  .post-card .read-more{font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--tan);display:flex;align-items:center;gap:6px;margin-top:auto;}
+  .post-card .read-more::after{content:'→';transition:transform 240ms;}
+  .post-card:hover .read-more::after{transform:translateX(4px);}
+
+  /* Featured post (first) */
+  .post-card.featured{grid-column:span 2;}
+  @media(max-width:900px){.post-card.featured{grid-column:span 1;}}
+  .post-card.featured .thumb{aspect-ratio:21/9;}
+  .post-card.featured h2{font-size:32px;}
+
+  .footer{background:#141414;border-top:1px solid rgba(245,239,230,0.06);padding:56px 0 36px;}
+  .footer-row{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;margin-bottom:40px;}
+  .footer .tag{color:var(--charcoal);font-size:13px;margin-top:12px;max-width:280px;line-height:1.6;}
+  .footer-links{display:flex;gap:48px;flex-wrap:wrap;}
+  .footer-links h5{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--charcoal);margin:0 0 14px;}
+  .footer-links ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px;}
+  .footer-links a{font-size:13px;color:rgba(245,239,230,0.6);transition:color 240ms;}
+  .footer-links a:hover{color:var(--tan);}
+  .footer-bottom{padding-top:28px;border-top:1px solid rgba(245,239,230,0.06);font-size:11px;color:rgba(245,239,230,0.3);letter-spacing:0.06em;}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity 700ms cubic-bezier(.22,.61,.36,1),transform 700ms cubic-bezier(.22,.61,.36,1);}.reveal.in{opacity:1;transform:none;}
+  @media(max-width:768px){.container{padding:0 20px;}.blog-hero{padding:120px 0 56px;}.posts{padding:56px 0 80px;}}
+</style>
+</head>
+<body>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=109271119','ym');
+    ym(109271119,'init',{ssr:true,webvisor:true,clickmap:true,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/109271119" style="position:absolute;left:-9999px;" alt=""/></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<nav class="nav">
+  <div class="container nav-row">
+    <a href="index.html" class="logo">ASFERIA<span>·</span>ADVENTURE</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#tours">Направления</a>
+      <a href="index.html#team">Команда</a>
+      <a href="index.html#gallery">Галерея</a>
+      <a href="index.html#about">О нас</a>
+      <a href="blog.html" class="active">Блог</a>
+      <a href="index.html#contact">Контакты</a>
+    </div>
+    <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+  </div>
+</nav>
+
+<header class="blog-hero">
+  <div class="container">
+    <div class="eyebrow">Блог · Asferia Adventure</div>
+    <h1>Восточный<br>Казахстан</h1>
+    <p class="sub">Маршруты, советы и истории от команды, которая исследует горы ВКО с 2023 года. Места, которые мы знаем изнутри.</p>
+  </div>
+</header>
+
+<section class="posts">
+  <div class="container">
+    <div class="posts-grid reveal">
+
+      <!-- Статья 1 — главная, широкая -->
+      <a class="post-card featured" href="blog/kuda-poehat-na-vykhodnye-iz-usk.html">
+        <div class="thumb">
+          <img src="assets/photo-website-hero.jpg" alt="Куда поехать на выходные из Усть-Каменогорска">
+        </div>
+        <div class="body">
+          <div class="meta">
+            <span class="date">18 мая 2026</span>
+            <span class="cat">Маршруты</span>
+          </div>
+          <h2>Куда поехать на выходные из Усть-Каменогорска: 6 маршрутов с Asferia</h2>
+          <p class="excerpt">Радоновое озеро, перевал Звёздный, устье Богданихи — шесть направлений на любой вкус и уровень подготовки. Однодневные и многодневные, спокойные и экстремальные.</p>
+          <span class="read-more">Читать статью</span>
+        </div>
+      </a>
+
+      <!-- Заглушки для будущих статей -->
+      <div class="post-card" style="opacity:0.35;pointer-events:none;">
+        <div class="thumb" style="background:#1c1c1c;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--charcoal);">Скоро</span>
+        </div>
+        <div class="body">
+          <div class="meta"><span class="cat">Советы</span></div>
+          <h2>Что взять с собой в джип-тур: полный список снаряжения</h2>
+          <p class="excerpt">Одежда, обувь, документы и то, о чём часто забывают. Список от гидов Asferia.</p>
+          <span class="read-more">Скоро</span>
+        </div>
+      </div>
+
+      <div class="post-card" style="opacity:0.35;pointer-events:none;">
+        <div class="thumb" style="background:#1c1c1c;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--charcoal);">Скоро</span>
+        </div>
+        <div class="body">
+          <div class="meta"><span class="cat">Места</span></div>
+          <h2>Радоновое озеро: история, как добраться и что посмотреть</h2>
+          <p class="excerpt">Всё что нужно знать о самом посещаемом горном озере Риддера — с высоты 1920 метров.</p>
+          <span class="read-more">Скоро</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-row">
+      <div>
+        <div class="logo">ASFERIA<span>·</span>ADVENTURE</div>
+        <div class="tag">Джип-туры и экспедиции по Восточному Казахстану.</div>
+      </div>
+      <div class="footer-links">
+        <div><h5>Навигация</h5><ul>
+          <li><a href="index.html#tours">Направления</a></li>
+          <li><a href="blog.html">Блог</a></li>
+          <li><a href="index.html#about">О нас</a></li>
+          <li><a href="index.html#contact">Контакты</a></li>
+        </ul></div>
+        <div><h5>Контакты</h5><ul>
+          <li><a href="https://wa.me/77770650260">+7 777 065 02 60</a></li>
+          <li><a href="mailto:asferia@mail.ru">asferia@mail.ru</a></li>
+          <li><a href="https://www.instagram.com/asferia_adventure/">Instagram</a></li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Asferia Adventure · Лицензированный туроператор · Казахстан</div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
