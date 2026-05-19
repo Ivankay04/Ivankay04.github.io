@@ -933,35 +933,92 @@
       <div class="booking-form reveal reveal-r">
         <div class="form-eyebrow">Booking enquiry</div>
         <h3>Send a<br>request</h3>
-        <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Sent →'; this.querySelector('button').disabled=true;">
+        <form id="bookingFormEn">
           <div class="field">
             <label>Name</label>
-            <input type="text" placeholder="How should we address you?" required>
+            <input type="text" id="en-name" placeholder="How should we address you?" required>
           </div>
           <div class="field">
-            <label>Email or WhatsApp</label>
-            <input type="text" placeholder="Your preferred contact" required>
+            <label>Email</label>
+            <input type="email" id="en-email" placeholder="your@email.com" required>
+          </div>
+          <div class="field">
+            <label>WhatsApp / Phone</label>
+            <input type="text" id="en-phone" placeholder="+1 234 567 8900">
           </div>
           <div class="field">
             <label>Tour of interest</label>
-            <select required>
+            <select id="en-tour" required>
               <option value="">— select —</option>
               <option>Radon Lake</option>
+              <option>Bogdanikha River Mouth</option>
+              <option>Zvezdny Pass</option>
               <option>Maloulskoye Reservoir</option>
               <option>Ubinsky Waterfall</option>
-              <option>Zvezdny Pass</option>
-              <option>Bogdanikha River Mouth</option>
               <option>Katon-Karagay Expedition</option>
               <option>Help me choose</option>
             </select>
           </div>
           <div class="field">
-            <label>Group size &amp; dates (optional)</label>
-            <textarea placeholder="E.g. 4 people, late July"></textarea>
+            <label>Group size</label>
+            <select id="en-people">
+              <option value="">— select —</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5–8</option>
+              <option>8+</option>
+            </select>
           </div>
-          <button type="submit" class="btn btn--tan">Send request <span class="arrow">→</span></button>
-          <div class="note">By submitting you agree to our data processing terms. We respond within one hour during business hours (UTC+6).</div>
+          <div class="field">
+            <label>Preferred dates (optional)</label>
+            <input type="text" id="en-date" placeholder="E.g. late July 2026">
+          </div>
+          <button type="submit" id="en-btn" class="btn btn--tan">Send request <span class="arrow">→</span></button>
+          <div id="en-status" style="margin-top:12px;font-size:13px;color:var(--tan);display:none;"></div>
+          <div class="note">By submitting you agree to our data processing terms. We respond within one hour (UTC+6).</div>
         </form>
+        <script>
+        document.getElementById('bookingFormEn').addEventListener('submit', async function(e) {
+          e.preventDefault();
+          var btn = document.getElementById('en-btn');
+          var status = document.getElementById('en-status');
+          btn.disabled = true;
+          btn.textContent = 'Sending...';
+
+          var data = {
+            secret: 'asferia2026secret',
+            name:   document.getElementById('en-name').value,
+            phone:  document.getElementById('en-phone').value,
+            email:  document.getElementById('en-email').value,
+            tour:   document.getElementById('en-tour').value + ' (EN)',
+            date:   document.getElementById('en-date').value,
+            people: document.getElementById('en-people').value,
+          };
+
+          try {
+            var res = await fetch('https://asferia-bot-production.up.railway.app/booking', {
+              method: 'POST',
+              headers: {'Content-Type': 'application/json', 'X-Secret': 'asferia2026secret'},
+              body: JSON.stringify(data)
+            });
+            if (res.ok) {
+              btn.textContent = '✓ Request sent!';
+              btn.style.background = '#3B4A3F';
+              status.textContent = 'We will contact you within one hour!';
+              status.style.display = 'block';
+              this.reset();
+            } else { throw new Error(); }
+          } catch(err) {
+            btn.disabled = false;
+            btn.innerHTML = 'Send request <span class="arrow">→</span>';
+            status.textContent = 'Error. Please write us on WhatsApp directly!';
+            status.style.color = '#e07070';
+            status.style.display = 'block';
+          }
+        });
+        </script>
       </div>
     </div>
   </div>

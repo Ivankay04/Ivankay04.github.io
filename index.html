@@ -1096,31 +1096,95 @@
       <div class="booking-form reveal reveal-r">
         <div class="form-eyebrow">Запрос на бронь</div>
         <h3>Оставьте<br>заявку</h3>
-        <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Отправлено →'; this.querySelector('button').disabled=true;">
+        <form id="bookingForm">
           <div class="field">
             <label>Имя</label>
-            <input type="text" placeholder="Как к вам обращаться" required>
+            <input type="text" id="bf-name" placeholder="Как к вам обращаться" required>
           </div>
           <div class="field">
             <label>Телефон</label>
-            <input type="tel" placeholder="+7 ___ ___ __ __" required>
+            <input type="tel" id="bf-phone" placeholder="+7 ___ ___ __ __" required>
+          </div>
+          <div class="field">
+            <label>Email (необязательно)</label>
+            <input type="email" id="bf-email" placeholder="your@email.com">
           </div>
           <div class="field">
             <label>Какой тур</label>
-            <select required>
+            <select id="bf-tour" required>
               <option value="">— выберите направление —</option>
               <option>Радоновое озеро</option>
-              <option>Малоульбинское водохранилище</option>
-              <option>Рыболовные туры</option>
-              <option>Перевал Звёздный</option>
               <option>Устье Богданихи</option>
+              <option>Перевал Звёздный</option>
+              <option>Малоульбинское водохранилище</option>
+              <option>Убинский водопад</option>
               <option>Катон-Карагай</option>
               <option>Подобрать вместе</option>
             </select>
           </div>
-          <button type="submit" class="btn btn--tan">Отправить <span class="arrow">→</span></button>
-          <div class="note">Нажимая «Отправить», вы соглашаетесь с условиями обработки данных. Мы свяжемся в течение часа в рабочее время.</div>
+          <div class="field">
+            <label>Желаемая дата (необязательно)</label>
+            <input type="text" id="bf-date" placeholder="Например: июнь 2026">
+          </div>
+          <div class="field">
+            <label>Количество человек</label>
+            <select id="bf-people">
+              <option value="">— выберите —</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5–8</option>
+              <option>более 8</option>
+            </select>
+          </div>
+          <button type="submit" id="bf-btn" class="btn btn--tan">Отправить <span class="arrow">→</span></button>
+          <div id="bf-status" style="margin-top:12px;font-size:13px;color:var(--tan);display:none;"></div>
+          <div class="note">Нажимая «Отправить», вы соглашаетесь с условиями обработки данных. Мы свяжемся в течение часа.</div>
         </form>
+        <script>
+        document.getElementById('bookingForm').addEventListener('submit', async function(e) {
+          e.preventDefault();
+          var btn = document.getElementById('bf-btn');
+          var status = document.getElementById('bf-status');
+          btn.disabled = true;
+          btn.textContent = 'Отправляем...';
+          status.style.display = 'none';
+
+          var data = {
+            secret: 'asferia2026secret',
+            name:   document.getElementById('bf-name').value,
+            phone:  document.getElementById('bf-phone').value,
+            email:  document.getElementById('bf-email').value,
+            tour:   document.getElementById('bf-tour').value,
+            date:   document.getElementById('bf-date').value,
+            people: document.getElementById('bf-people').value,
+          };
+
+          try {
+            var res = await fetch('https://asferia-bot-production.up.railway.app/booking', {
+              method: 'POST',
+              headers: {'Content-Type': 'application/json', 'X-Secret': 'asferia2026secret'},
+              body: JSON.stringify(data)
+            });
+            if (res.ok) {
+              btn.textContent = '✓ Заявка отправлена';
+              btn.style.background = '#3B4A3F';
+              status.textContent = 'Мы свяжемся с вами в течение часа!';
+              status.style.display = 'block';
+              this.reset();
+            } else {
+              throw new Error('server error');
+            }
+          } catch(err) {
+            btn.disabled = false;
+            btn.innerHTML = 'Отправить <span class="arrow">→</span>';
+            status.textContent = 'Ошибка отправки. Напишите нам в WhatsApp!';
+            status.style.color = '#e07070';
+            status.style.display = 'block';
+          }
+        });
+        </script>
       </div>
     </div>
   </div>
