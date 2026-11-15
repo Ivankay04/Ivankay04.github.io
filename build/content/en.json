@@ -1,62 +1,647 @@
 {
-"blog_url": "blog-en.html", "price_fmt": "from {} KZT", "thousands": ",", "on_request": "on request",
-"nav": {"summer": "Summer", "winter": "Winter", "journey": "Tailor-made", "about": "About", "blog": "Journal", "contact": "Contact"},
-"meta": {
- "home": {"title": "Asferia Adventure — Private Journeys Through East Kazakhstan & the Altai", "desc": "Local tour operator in East Kazakhstan. Private journeys from 1 day to a week or more: route, 4WD vehicles, English-speaking guides, hotels, meals and permits. Katon-Karagay, Lake Markakol and the Kazakh Altai in summer; cat-skiing and snowmobiles in winter."},
- "summer": {"title": "Summer in East Kazakhstan — Tailor-Made Altai Journeys, Jeep Day Trips, Fishing | Asferia", "desc": "Summer programs in East Kazakhstan: tailor-made journeys through the Kazakh Altai, jeep day trips from Ridder, multi-day trips, fishing, rafting and horse riding. What is included and what it costs."},
- "winter": {"title": "Winter in East Kazakhstan — Cat-Skiing and Snowmobile Tours in the Western Altai | Asferia", "desc": "Winter in the Western Altai near Ridder: cat-skiing and guided snowmobile tours. Accommodation and transfers from Ust-Kamenogorsk arranged."}
-},
-"hero": {"eyebrow": "East Kazakhstan · Altai · All year", "h1": ["Journeys through", "*East Kazakhstan"],
- "sub": "One local team arranges the whole trip: route, vehicles, guides, hotels, meals and permits. 4WD journeys through the Altai in summer, cat-skiing and snowmobiles in winter. We meet you at Ust-Kamenogorsk airport and bring you back.",
- "cta1": "Plan your journey", "cta2": "Summer & winter",
- "facts": [["From USD 1,000", "per person, multi-day"], ["1 to 7+", "days"], ["Private", "groups from 2"], ["Airport", "pick-up included"]]},
-"stats": [["414", "Guests hosted · season 2026", "68 trips between 25 May and 9 October, from Kazakhstan and abroad."], ["6", "Multi-day journeys · 2026", "Private trips with overnight stays across East Kazakhstan."], ["2023", "Operating since", "Founded in Ridder, East Kazakhstan."]],
-"seasons": {"eyebrow": "Programs", "h2": "Summer<br>and winter", "sub": "Two seasons, two sets of programs. Each has ready routes and room to build your own.",
- "summer": {"when": ["May – October"], "title": "Summer", "items": ["Tailor-made journeys across East Kazakhstan", "Katon-Karagay, Lake Markakol, Rakhmanov Springs", "Jeep day trips into the mountains from Ridder", "Fishing, rafting, horse riding and hiking"], "cta": "Summer programs"},
- "winter": {"when": ["December – March", "New"], "title": "Winter", "items": ["Cat-skiing: a snowcat takes you up, you ride untracked snow down", "Guided snowmobile tours", "Accommodation and transfers from Ust-Kamenogorsk"], "fine": "Winter dates and prices are being finalised. Write to us and we will send them as soon as they are ready.", "cta": "Winter programs"}},
-"journey": {"eyebrow": "Tailor-made", "h2": "One journey,<br>built around you", "sub": "The Kazakh Altai and the east of the country, assembled from the places below. From 3 to 7+ days — we shape the route to your dates, pace and interests.",
- "stops": [["National park", "Katon-Karagay<br>&amp; Belukha", "The gateway to Katon-Karagay National Park, with views towards Belukha, the highest peak of the Altai."], ["High-altitude lake", "Lake Yazevoye", "A forester’s cabin on the shore, a banya, fishing and paddling on the lake."], ["Springs", "Rakhmanov<br>Springs", "Radon springs, an eco-lodge and a boat trip to a waterfall."], ["Mountain road", "Old Austrian<br>Road", "Over the Burkhat Pass to Lake Markakol."], ["Canyons", "Kiin-Kerish", "Red and white clay cliffs near Zaisan — a desert landscape after days of mountains and forest."]],
- "cta": {"eyebrow": "Your route, your pace", "h3": "3, 5, 6 or 7+ days", "pills": ["3 days", "5 days", "6 days", "7+ days"], "p": "Every journey is private. Tell us your dates and what matters to you — we will send a day-by-day plan and a price.", "btn": "Plan your journey", "price": "<b>From USD 1,000 per person</b> for multi-day journeys. The final price depends on days, group size and hotels."}},
-"route": {"eyebrow": "Example route", "h2": "A 7-day journey,<br>day by day", "sub": "One way to see the whole region in a week. Shorter versions use the same building blocks.", "dayword": "Day {}",
- "days": [["Ust-Kamenogorsk → Katon-Karagay", "Pick-up at the airport, a drive into the Altai with photo stops, check-in at a hotel in the village."], ["Lake Yazevoye", "Morning horseback ride and a maral deer farm, then a drive to the lake. Cabin on the shore and a banya."], ["Rakhmanov Springs", "Fishing and SUP on the lake, then the springs. Boat trip to a waterfall, optional radon baths."], ["Radostny Pass &amp; Berel", "A 3–4 hour hike with views of Belukha. Evening in Berel with archery and a banya."], ["Burkhat Pass → Lake Markakol", "The Old Austrian Road — about six hours of mountain track. Campfire dinner on the lake."], ["Kiin-Kerish → Zaisan", "A morning on Lake Markakol, then down to the steppe and the clay canyons. Evening in Zaisan."], ["Transfer out", "An early transfer to the airport, the border crossing or your next destination."]],
- "sum": ["1,500 km", "6 nights · 6 locations", "Mountains, lakes, forest, hot springs and desert in one journey."], "note": "An example only. Every journey is private and adjusted to your group."},
-"band": {"eyebrow": "One journey", "h2": "Mountains, lakes, forest,<br><span class=\"accent\">hot springs</span> and desert"},
-"services": {"eyebrow": "What we arrange", "h2": "One team,<br>everything on the ground", "sub": "You deal with one coordinator. We book, drive, guide and look after the details.",
- "items": [["Transfers &amp; pick-up", "We meet you at Ust-Kamenogorsk airport and drive you along the whole route and back — to the airport, the border or your next stop."], ["Hotels, lodges &amp; cabins", "Accommodation is booked and confirmed for every night — guesthouses, eco-lodges and lakeside cabins we have stayed in ourselves."], ["Guide &amp; 4WD vehicles", "An English-speaking guide drives a prepared 4WD built for river fords, rocky climbs and mountain passes. Up to 4 guests per vehicle."], ["Meals &amp; activities", "Meals as planned in the itinerary, plus horse riding, fishing, SUP, hiking, banya and boat trips where the route allows."], ["Permits &amp; paperwork", "We arrange national park and border-zone permits. For foreign guests processing takes weeks — tell us your dates early."], ["Safety &amp; connection", "Starlink satellite internet and a Thuraya satellite phone where there is no mobile network. A backup plan for weather."]],
- "foot": "<b>Need only a part of it?</b> Hotels, transfers, guides and permits can also be arranged separately for your own plan in East Kazakhstan.",
- "stay_eyebrow": "Where you stay", "stay_h3": "Places on our routes", "stay_p": "A few of the lodges, cabins and hotels we use. Accommodation is confirmed for every trip.",
- "stays": ["Eco-lodge, Rakhmanov Springs", "Lakeside base, Lake Markakol", "Forester’s cabin, Lake Yazevoye", "Guesthouse, Berel", "Hotel, Katon-Karagay", "Hotel, Zaisan"]},
-"how": {"eyebrow": "How it works", "h2": "From the first message<br>to the airport", "steps": [["Tell us your dates", "Write on WhatsApp, by e-mail or with the form below. We reply within an hour during working hours (UTC+5)."], ["Get a day-by-day plan", "We send an itinerary with hotels, meals and a clear price, and adjust it until it fits your group."], ["Confirm with a deposit", "A deposit secures your dates and the accommodation. Payment details are agreed with you individually."], ["Arrive", "We meet you and look after the journey until you leave."]]},
-"gallery": {"eyebrow": "From the road", "h2": "Shots, not<br>postcards", "sub": "Taken on the trail. Click a photo to view it full screen.", "alt": "Asferia Adventure, East Kazakhstan — photo"},
-"about": {"eyebrow": "Who we are", "h2": "A team<br>from Ridder", "ps": ["Asferia Adventure is a licensed tour operator based in <strong>Ridder, East Kazakhstan</strong>. Since 2023 we have been taking guests into the Altai: to lakes, passes, waterfalls and the national parks of the region.", "We arrange the <strong>whole trip</strong>: guides, prepared 4WD vehicles, accommodation with partners, airport transfers and permits. One booking, one point of contact.", "On day trips lunch comes from Krem, a café in Ridder, and is included in the price."], "founder": ["Ivan Kaigorodov", "Guide · Founder"], "tag": ["Since 2023", "East Kazakhstan"],
- "team": [["Ivan Kaigorodov", "Category I guide · Founder", "since 2023"], ["Alexander", "Category I guide · Lead driver", "since 2014"], ["Vladislav", "Category I guide", "since 2025"], ["Sofia", "Administrator · your contact", "since 2025"]]},
-"faq": {"eyebrow": "Questions", "h2": "Before<br>you write", "items": [["Where is East Kazakhstan and how do I get there?", "East Kazakhstan borders Russia and China in the Altai Mountains. The gateway airport is Ust-Kamenogorsk (Oskemen, UKK), with domestic flights from Almaty and Astana. We meet you at the airport; guests arriving overland from China can be met at the Maikapchagai border crossing near Zaisan."], ["When is the best time to visit?", "The summer season runs from late May to October; the high mountains are fully open from mid-June to mid-September. Winter programs — cat-skiing and snowmobiles — run from December to March."], ["Do I need a visa or permits?", "Citizens of many countries, including the EU, UK, US and China, can enter Kazakhstan visa-free for short stays — check the current rules for your passport. Katon-Karagay National Park lies in a border zone, so foreign guests need a border-zone permit. We apply for it on your behalf; allow 2–4 weeks."], ["What is included in the price?", "Transport, guide, meals on the route and equipment for activities. Multi-day journeys include accommodation as listed in your itinerary. Everything is written out in the plan we send before you pay."], ["How do I book and pay?", "Send us your dates and group size. We reply with a day-by-day plan and a price; a deposit confirms the dates. Payment details are agreed individually, including QR payment for guests from China."]]},
-"blog": {"eyebrow": "Journal · Asferia Adventure", "h2": "Notes from<br>the region", "sub": "Long-form guides to East Kazakhstan, the Kazakh Altai and Katon-Karagay National Park — for travellers who want to understand a place before they arrive.", "all": "All articles", "read": "Read",
- "cards": [["blog/en/east-kazakhstan-travel-guide.html", "assets/blog/en/east-kazakhstan-hero.jpg", "Destination", "East Kazakhstan Travel Guide"], ["blog/en/altai-mountains-kazakhstan.html", "assets/blog/en/altai-hero.jpg", "Region", "The Altai Mountains, Kazakhstan"], ["blog/en/why-kazakhstan-adventure-destination.html", "assets/blog/en/why-kazakhstan-hero.jpg", "Perspective", "Why Kazakhstan Is the Next Adventure Destination"]]},
-"form": {"eyebrow": "Enquiry", "h2": "Plan your<br>journey", "lede": "Tell us when you plan to travel and what matters to you. We reply within an hour during working hours (UTC+5) with a day-by-day plan and a price.", "benefits": ["Day-by-day plan and a clear price", "Private groups from 2 guests", "Hotels, transfers and permits arranged", "Support throughout your stay"],
- "feyebrow": "Enquiry", "fh3": "Send a<br>request", "name": "Name", "phone": "WhatsApp / phone", "what": "What are you looking for?", "select": "— select —", "people": "Group size", "dates": "Preferred dates (optional)", "dates_ph": "E.g. July 2027",
- "options": {"home": ["Tailor-made journey · 3–5 days", "Tailor-made journey · 6–7+ days", "Day trip", "Winter program", "Hotels / transfers / guide only", "Not sure yet — advise me"], "summer": ["Tailor-made journey · 3–5 days", "Tailor-made journey · 6–7+ days", "Katon-Karagay", "Jeep day trip", "Multi-day trip near Ridder", "Fishing", "Rafting / horse riding / hiking", "Not sure yet — advise me"], "winter": ["Cat-skiing", "Snowmobile tour", "Winter program with accommodation", "Not sure yet — advise me"]},
- "send": "Send request", "sending": "Sending…", "sent": "Request sent", "sent_msg": "We will contact you within an hour during working hours.", "err": "Could not send. Please write to us on WhatsApp or by e-mail.", "note": "By submitting you agree that we use your details to reply to this request."},
-"contact": {"eyebrow": "Write to us directly", "h2": "We answer<br>every message", "sub": "Sofia is our administrator. She will help with routes, dates, prices and logistics.", "tag": "In touch", "name": "Sofia", "role": "Administrator", "quote": "“Write in any messenger — I reply within an hour during working hours.”",
- "channels": [["W", "WhatsApp · fastest response", "https://wa.me/77770650260"], ["@", "asferia@mail.ru", "mailto:asferia@mail.ru"], ["T", "Telegram", "https://t.me/asferiakazakhstan"], ["IG", "@asferia_adventure", "https://www.instagram.com/asferia_adventure/"]]},
-"footer": {"tag": "Journeys through East Kazakhstan: tailor-made routes, jeep tours and winter programs.", "nav": "Sections", "contact": "Contact", "social": "Social", "copy": "© 2026 Asferia Adventure · Licensed tour operator · Kazakhstan", "place": "East Kazakhstan · Ridder"},
-"summer": {
- "hero": {"eyebrow": "Summer · May – October", "h1": ["Summer in the", "*Kazakh Altai"], "sub": "From a single day out to a week-long route across East Kazakhstan. Below: what we run and what it costs.", "cta1": "Find a program", "facts": [["High mountains", "late May to October"], ["Up to 4 guests", "per vehicle"], ["Prices", "per person"]]},
- "tailor": {"eyebrow": "The main thing", "h2": "A route<br>built for you", "sub": "Katon-Karagay, Belukha, Lake Yazevoye, Rakhmanov Springs, Lake Markakol, Kiin-Kerish — we assemble a journey of 3 to 7+ days from these places, with accommodation, meals and airport transfer.", "box_eyebrow": "Private", "box_h3": "From 3 days to a week or more", "box_p": "The plan and the price are worked out for your dates and group. A 7-day example, day by day, is on the home page.", "btn": "See the route", "price": "<b>From USD 1,000 per person</b> for multi-day journeys."},
- "day": {"eyebrow": "One day", "h2": "Jeep day trips<br>from Ridder", "sub": "Out in the morning, back in the evening. Stops at viewpoints, short walks to lakes, lunch outdoors.",
-  "cards": [["Radon Lake", "A high-altitude lake under snowfields that last until midsummer. Our most requested route."], ["Zvezdny Pass", "Up through cedar forest to a pass at 1,930 m. On a clear day you see snow ridges on the horizon."], ["Bogdanikha River Mouth", "High plateaus and stone fields. Rarely visited, with a demanding road."], ["Cherepanovsky Belok", "A drive to a summit with a full-circle view of the Western Altai ridges."], ["Prokhodnoy Belok · express", "A half-day trip to the high country: a plateau and cedar forest."]],
-  "note": "Price per person with 4 guests in the vehicle. With fewer guests the price per person is higher: Radon Lake, for example, is 45,000 KZT with three guests and 65,000 KZT with two. Transfer from Ust-Kamenogorsk is priced separately."},
- "multi": {"eyebrow": "With overnight stays", "h2": "Several days<br>in the mountains", "sub": "Price per person for the whole program, with 4 guests in the vehicle.",
-  "rows": [["Maloulba Reservoir", "A mountain reservoir with islands and bays. Camp on the shore, SUP boards. 2 days from 60,000 KZT, 3 days from 80,000 KZT."], ["Uba Waterfall", "A fishing trip on the Uba river: taiga and grayling, tackle provided. 2 days from 65,000 KZT, 3 days from 90,000 KZT."], ["Katon-Karagay", "2 to 4 days with nights in guesthouses. Maral deer farms, mountain villages, views of Belukha."], ["Expeditions", "Demanding routes with several days of autonomy: the Shambala meteorite site, the Malaya Ulba – Cherepanikha loop. Preparation takes 2–4 weeks."]]},
- "act": {"eyebrow": "More", "h2": "On water, on horseback<br>and on foot", "sub": "Book separately or add to a main program.",
-  "rows": [["Fishing", "From a day on the river to several days. Tackle provided. With a jet boat — from 100,000 KZT."], ["Rafting", "Packrafts and boats with an instructor. The route is matched to the group’s experience."], ["Horse riding", "Rides from two hours. Multi-day horse routes on request."], ["Hiking", "Guided day hikes, from an easy walk to a full mountain day."], ["Outdoor dinner &amp; photo session", "Dinner or breakfast cooked by a field kitchen, a table set in the mountains, a photo shoot."], ["Off-road", "Fords, mud and rocky climbs — for those who come for the driving. Spring and autumn."], ["E-bikes", "Short rides around the area."], ["Buggies &amp; quad bikes", "Subject to vehicles being available on your dates."]],
-  "note": "Corporate trips are built from the same parts — tell us the brief and the number of people."}
-},
-"winter": {
- "hero": {"eyebrow": "Winter · December – March", "h1": ["Winter in the", "*Western Altai"], "sub": "Two programs near Ridder: cat-skiing and snowmobile tours. We arrange accommodation and the drive from Ust-Kamenogorsk.", "cta1": "Ask for dates and prices", "facts": [["December – March", "season"], ["Ridder", "120 km from Ust-Kamenogorsk"], ["Prices", "to be confirmed"]]},
- "intro": {"eyebrow": "Winter programs", "h2": "Snowcats<br>and snowmobiles", "sub": "This season’s programs are still being put together. Leave a request and we will send dates and prices as soon as we have them."},
- "cards": [{"pill": "Cat-skiing", "title": "By snowcat<br>into the mountains", "items": ["A snowcat takes the group up the slope; you ride untracked snow down", "For skiers and snowboarders", "Trips for non-skiers too: a ride up to the viewpoints"], "fine": "Run with a partner snowcat operator. Price and schedule on request."}, {"pill": "Snowmobiles", "title": "Snowmobile<br>tours", "items": ["Guided one-day routes", "Briefing before the ride", "Clothing and gear: to be confirmed"], "fine": "This program is being launched. Price and schedule on request."}],
- "more": {"eyebrow": "With the program", "h2": "What else<br>we arrange", "items": [["Accommodation", "We find and book a place to stay in and around Ridder for your dates."], ["Transfer", "Pick-up from Ust-Kamenogorsk airport or railway station and the drive back."], ["A program for your group", "Friends, a family or a company trip — we plan the days around your group."]]},
- "cta": "Ask for dates and prices"
-}
+ "blog_url": "blog-en.html",
+ "price_fmt": "from {} KZT",
+ "thousands": ",",
+ "on_request": "on request",
+ "nav": {
+  "summer": "Summer",
+  "winter": "Winter",
+  "journey": "Tailor-made",
+  "about": "About",
+  "blog": "Journal",
+  "contact": "Contact"
+ },
+ "meta": {
+  "home": {
+   "title": "Asferia Adventure — Private Journeys Through East Kazakhstan & the Altai",
+   "desc": "Local tour operator in East Kazakhstan. Private journeys from 1 day to a week or more: route, 4WD vehicles, English-speaking guides, hotels, meals and permits. Katon-Karagay, Lake Markakol and the Kazakh Altai in summer; snowcat and snowmobile tours in winter."
+  },
+  "summer": {
+   "title": "Summer in East Kazakhstan — Tailor-Made Altai Journeys, Jeep Day Trips, Fishing | Asferia",
+   "desc": "Summer programs in East Kazakhstan: tailor-made journeys through the Kazakh Altai, jeep day trips from Ridder, multi-day trips, fishing, rafting and horse riding. What is included and what it costs."
+  },
+  "winter": {
+   "title": "Winter in East Kazakhstan — Snowcat and Snowmobile Tours in the Western Altai | Asferia",
+   "desc": "Winter in the Western Altai near Ridder: sightseeing trips by snowcat and guided snowmobile tours. No skiing involved. Accommodation and transfers from Ust-Kamenogorsk arranged."
+  }
+ },
+ "hero": {
+  "eyebrow": "East Kazakhstan · Altai · All year",
+  "h1": [
+   "Journeys through",
+   "*East Kazakhstan"
+  ],
+  "sub": "One local team arranges the whole trip: route, vehicles, guides, hotels, meals and permits. 4WD journeys through the Altai in summer, snowcat and snowmobile tours in winter. We meet you at Ust-Kamenogorsk airport and bring you back.",
+  "cta1": "Plan your journey",
+  "cta2": "Summer & winter",
+  "facts": [
+   [
+    "From USD 1,000",
+    "per person, multi-day"
+   ],
+   [
+    "1 to 7+",
+    "days"
+   ],
+   [
+    "Private",
+    "groups from 2"
+   ],
+   [
+    "Airport",
+    "pick-up included"
+   ]
+  ]
+ },
+ "stats": [
+  [
+   "414",
+   "Guests hosted · season 2026",
+   "Guests from Kazakhstan and abroad."
+  ],
+  [
+   "68",
+   "Trips · season 2026",
+   "Between 25 May and 9 October: day trips and multi-day journeys."
+  ],
+  [
+   "2023",
+   "Operating since",
+   "Founded in Ridder, East Kazakhstan."
+  ]
+ ],
+ "seasons": {
+  "eyebrow": "Programs",
+  "h2": "Summer<br>and winter",
+  "sub": "Two seasons, two sets of programs. Each has ready routes and room to build your own.",
+  "summer": {
+   "when": [
+    "May – October"
+   ],
+   "title": "Summer",
+   "items": [
+    "Tailor-made journeys across East Kazakhstan",
+    "Katon-Karagay, Lake Markakol, Lake Yazevoye",
+    "Jeep day trips into the mountains from Ridder",
+    "Fishing, rafting, horse riding and hiking"
+   ],
+   "cta": "Summer programs"
+  },
+  "winter": {
+   "when": [
+    "December – March",
+    "New"
+   ],
+   "title": "Winter",
+   "items": [
+    "Snowcat trips into the winter mountains",
+    "Guided snowmobile tours",
+    "Accommodation and transfers from Ust-Kamenogorsk"
+   ],
+   "fine": "Winter dates and prices are being finalised. Write to us and we will send them as soon as they are ready.",
+   "cta": "Winter programs"
+  }
+ },
+ "journey": {
+  "eyebrow": "Tailor-made",
+  "h2": "One journey,<br>built around you",
+  "sub": "The Kazakh Altai and the east of the country, assembled from the places below. From 3 to 7+ days — we shape the route to your dates, pace and interests.",
+  "stops": [
+   [
+    "National park",
+    "Katon-Karagay<br>&amp; Belukha",
+    "The gateway to Katon-Karagay National Park, with views towards Belukha, the highest peak of the Altai."
+   ],
+   [
+    "High-altitude lake",
+    "Lake Yazevoye",
+    "A forester’s cabin on the shore, a banya, fishing and paddling on the lake."
+   ],
+   [
+    "High-altitude lake",
+    "Radon<br>Lake",
+    "A lake under snowfields in the Western Altai. A demanding road with over a kilometre of climb."
+   ],
+   [
+    "Mountain road",
+    "Old Austrian<br>Road",
+    "Over the Burkhat Pass to Lake Markakol."
+   ],
+   [
+    "Mountain reservoir",
+    "Maloulba Reservoir",
+    "Islands, bays and a camp on the shore. The dams here date back to the 1930s."
+   ]
+  ],
+  "cta": {
+   "eyebrow": "Your route, your pace",
+   "h3": "3, 5, 6 or 7+ days",
+   "pills": [
+    "3 days",
+    "5 days",
+    "6 days",
+    "7+ days"
+   ],
+   "p": "Every journey is private. Tell us your dates and what matters to you — we will send a day-by-day plan and a price.",
+   "btn": "Plan your journey",
+   "price": "<b>From USD 1,000 per person</b> for multi-day journeys. The final price depends on days, group size and hotels."
+  }
+ },
+ "route": {
+  "eyebrow": "Example route",
+  "h2": "A 7-day journey,<br>day by day",
+  "sub": "One way to see the whole region in a week. Shorter versions use the same building blocks.",
+  "dayword": "Day {}",
+  "days": [
+   [
+    "Ust-Kamenogorsk → Katon-Karagay",
+    "Pick-up at the airport, a drive into the Altai with photo stops, check-in at a hotel in the village."
+   ],
+   [
+    "Lake Yazevoye",
+    "Morning horseback ride and a maral deer farm, then a drive to the lake. Cabin on the shore and a banya."
+   ],
+   [
+    "Rakhmanov Springs",
+    "Fishing and SUP on the lake, then the springs. Boat trip to a waterfall, optional radon baths."
+   ],
+   [
+    "Radostny Pass &amp; Berel",
+    "A 3–4 hour hike with views of Belukha. Evening in Berel with archery and a banya."
+   ],
+   [
+    "Burkhat Pass → Lake Markakol",
+    "The Old Austrian Road — about six hours of mountain track. Campfire dinner on the lake."
+   ],
+   [
+    "Kiin-Kerish → Zaisan",
+    "A morning on Lake Markakol, then down to the steppe and the clay canyons. Evening in Zaisan."
+   ],
+   [
+    "Transfer out",
+    "An early transfer to the airport, the border crossing or your next destination."
+   ]
+  ],
+  "sum": [
+   "1,500 km",
+   "6 nights · 6 locations",
+   "Mountains, lakes, forest, hot springs and desert in one journey."
+  ],
+  "note": "An example only. Every journey is private and adjusted to your group."
+ },
+ "band": {
+  "eyebrow": "One journey",
+  "h2": "Mountains, lakes, forest,<br><span class=\"accent\">hot springs</span> and desert"
+ },
+ "services": {
+  "eyebrow": "What we arrange",
+  "h2": "One team,<br>everything on the ground",
+  "sub": "You deal with one coordinator. We book, drive, guide and look after the details.",
+  "items": [
+   [
+    "Pick-up &amp; transfers",
+    "We meet you at Ust-Kamenogorsk airport or railway station. After the trip we take you back there, to the border or to another city."
+   ],
+   [
+    "Hotels &amp; camp",
+    "We book hotels and guesthouses for every night. Where there is nowhere to stay, we set up our own camp: the tents, kitchen and gear are ours."
+   ],
+   [
+    "4WD vehicles &amp; guides",
+    "Toyota Land Cruiser, Nissan Patrol and Tank vehicles prepared for mountain tracks. The driver is a guide who runs these routes every season; English-speaking guides are available. Up to 4 guests per vehicle."
+   ],
+   [
+    "Meals &amp; activities",
+    "Meals are listed in the plan for every day. Along the route we add fishing, horse riding, SUP, hikes and a banya."
+   ],
+   [
+    "Permits &amp; paperwork",
+    "We arrange national park entry and the border-zone permit. All we need from you is passport copies — send them as soon as you book."
+   ],
+   [
+    "Safety &amp; connection",
+    "Starlink and a Thuraya satellite phone where there is no network. If weather closes a pass, the guide has a backup route."
+   ]
+  ],
+  "foot": "<b>Need only a part of it?</b> Hotels, transfers, guides and permits can also be arranged separately for your own plan in East Kazakhstan.",
+  "stay_eyebrow": "Where you stay",
+  "stay_h3": "Places on our routes",
+  "stay_p": "Hotels and lodges where we have stayed with guests. In wild places with nowhere to stay, we live in our own camp.",
+  "stays": [
+   "Hotel, Ridder",
+   "Hotel, Ridder",
+   "Lakeside base, Lake Markakol",
+   "Hotel, Katon-Karagay",
+   "Eco-lodge, Rakhmanov Springs",
+   "Camp, in wild places — a well-equipped camp with good gear"
+  ]
+ },
+ "how": {
+  "eyebrow": "How it works",
+  "h2": "From the first message<br>to the airport",
+  "steps": [
+   [
+    "Tell us your dates",
+    "Write on WhatsApp, by e-mail or with the form below. We reply within an hour during working hours (UTC+5)."
+   ],
+   [
+    "Get a day-by-day plan",
+    "We send an itinerary with hotels, meals and a clear price, and adjust it until it fits your group."
+   ],
+   [
+    "Confirm with a deposit",
+    "A deposit secures your dates and the accommodation. Payment details are agreed with you individually."
+   ],
+   [
+    "Arrive",
+    "We meet you and look after the journey until you leave."
+   ]
+  ]
+ },
+ "gallery": {
+  "eyebrow": "From the road",
+  "h2": "Shots, not<br>postcards",
+  "sub": "Taken on the trail. Click a photo to view it full screen.",
+  "alt": "Asferia Adventure, East Kazakhstan — photo"
+ },
+ "about": {
+  "eyebrow": "Who we are",
+  "h2": "A team<br>from Ridder",
+  "ps": [
+   "Asferia Adventure is a licensed tour operator based in <strong>Ridder, East Kazakhstan</strong>. Since 2023 we have been taking guests into the Altai: to lakes, passes, waterfalls and the national parks of the region.",
+   "We arrange the <strong>whole trip</strong>: guides, prepared 4WD vehicles, accommodation with partners, airport transfers and permits. One booking, one point of contact.",
+   "On day trips lunch comes from Krem, a café in Ridder, and is included in the price."
+  ],
+  "founder": [
+   "Ivan Kaigorodov",
+   "Guide · Founder"
+  ],
+  "tag": [
+   "Since 2023",
+   "East Kazakhstan"
+  ],
+  "team": [
+   [
+    "Ivan Kaigorodov",
+    "Category I guide · Founder",
+    "since 2023"
+   ],
+   [
+    "Alexander",
+    "Category I guide · Lead driver",
+    "since 2014"
+   ],
+   [
+    "Vladislav",
+    "Category I guide",
+    "since 2025"
+   ],
+   [
+    "Sofia",
+    "Administrator · your contact",
+    "since 2025"
+   ]
+  ]
+ },
+ "faq": {
+  "eyebrow": "Questions",
+  "h2": "Before<br>you write",
+  "items": [
+   [
+    "Where is East Kazakhstan and how do I get there?",
+    "East Kazakhstan borders Russia and China in the Altai Mountains. The gateway airport is Ust-Kamenogorsk (Oskemen, UKK), with domestic flights from Almaty and Astana. We meet you at the airport; guests arriving overland from China can be met at the Maikapchagai border crossing near Zaisan."
+   ],
+   [
+    "When is the best time to visit?",
+    "The summer season runs from late May to October; the high mountains are fully open from mid-June to mid-September. Winter programs — snowcat and snowmobile tours — run from December to March."
+   ],
+   [
+    "Do I need a visa or permits?",
+    "Citizens of many countries, including the EU, UK, US and China, can enter Kazakhstan visa-free for short stays — check the current rules for your passport. Katon-Karagay National Park lies in a border zone, so foreign guests need a border-zone permit. We apply for it on your behalf; allow 2–4 weeks."
+   ],
+   [
+    "What is included in the price?",
+    "Transport, guide, meals on the route and equipment for activities. Multi-day journeys include accommodation as listed in your itinerary. Everything is written out in the plan we send before you pay."
+   ],
+   [
+    "How do I book and pay?",
+    "Send us your dates and group size. We reply with a day-by-day plan and a price; a deposit confirms the dates. Payment details are agreed individually, including QR payment for guests from China."
+   ]
+  ]
+ },
+ "blog": {
+  "eyebrow": "Journal · Asferia Adventure",
+  "h2": "Notes from<br>the region",
+  "sub": "Long-form guides to East Kazakhstan, the Kazakh Altai and Katon-Karagay National Park — for travellers who want to understand a place before they arrive.",
+  "all": "All articles",
+  "read": "Read",
+  "cards": [
+   [
+    "blog/en/east-kazakhstan-travel-guide.html",
+    "assets/blog/en/east-kazakhstan-hero.jpg",
+    "Destination",
+    "East Kazakhstan Travel Guide"
+   ],
+   [
+    "blog/en/altai-mountains-kazakhstan.html",
+    "assets/blog/en/altai-hero.jpg",
+    "Region",
+    "The Altai Mountains, Kazakhstan"
+   ],
+   [
+    "blog/en/why-kazakhstan-adventure-destination.html",
+    "assets/blog/en/why-kazakhstan-hero.jpg",
+    "Perspective",
+    "Why Kazakhstan Is the Next Adventure Destination"
+   ]
+  ]
+ },
+ "form": {
+  "eyebrow": "Enquiry",
+  "h2": "Plan your<br>journey",
+  "lede": "Tell us when you plan to travel and what matters to you. We reply within an hour during working hours (UTC+5) with a day-by-day plan and a price.",
+  "benefits": [
+   "Day-by-day plan and a clear price",
+   "Private groups from 2 guests",
+   "Hotels, transfers and permits arranged",
+   "Support throughout your stay"
+  ],
+  "feyebrow": "Enquiry",
+  "fh3": "Send a<br>request",
+  "name": "Name",
+  "phone": "WhatsApp / phone",
+  "what": "What are you looking for?",
+  "select": "— select —",
+  "people": "Group size",
+  "dates": "Preferred dates (optional)",
+  "dates_ph": "E.g. July 2027",
+  "options": {
+   "home": [
+    "Tailor-made journey · 3–5 days",
+    "Tailor-made journey · 6–7+ days",
+    "Day trip",
+    "Winter program",
+    "Hotels / transfers / guide only",
+    "Not sure yet — advise me"
+   ],
+   "summer": [
+    "Tailor-made journey · 3–5 days",
+    "Tailor-made journey · 6–7+ days",
+    "Katon-Karagay",
+    "Jeep day trip",
+    "Multi-day trip near Ridder",
+    "Fishing",
+    "Rafting / horse riding / hiking",
+    "Not sure yet — advise me"
+   ],
+   "winter": [
+    "Snowcat trip",
+    "Snowmobile tour",
+    "Winter program with accommodation",
+    "Not sure yet — advise me"
+   ]
+  },
+  "send": "Send request",
+  "sending": "Sending…",
+  "sent": "Request sent",
+  "sent_msg": "We will contact you within an hour during working hours.",
+  "err": "Could not send. Please write to us on WhatsApp or by e-mail.",
+  "note": "By submitting you agree that we use your details to reply to this request."
+ },
+ "contact": {
+  "eyebrow": "Write to us directly",
+  "h2": "We answer<br>every message",
+  "sub": "Sofia is our administrator. She will help with routes, dates, prices and logistics.",
+  "tag": "In touch",
+  "name": "Sofia",
+  "role": "Administrator",
+  "quote": "“Write in any messenger — I reply within an hour during working hours.”",
+  "channels": [
+   [
+    "W",
+    "WhatsApp · fastest response",
+    "https://wa.me/77770650260"
+   ],
+   [
+    "@",
+    "asferia@mail.ru",
+    "mailto:asferia@mail.ru"
+   ],
+   [
+    "T",
+    "Telegram",
+    "https://t.me/asferiakazakhstan"
+   ],
+   [
+    "IG",
+    "@asferia_adventure",
+    "https://www.instagram.com/asferia_adventure/"
+   ]
+  ]
+ },
+ "footer": {
+  "tag": "Journeys through East Kazakhstan: tailor-made routes, jeep tours and winter programs.",
+  "nav": "Sections",
+  "contact": "Contact",
+  "social": "Social",
+  "copy": "© 2026 Asferia Adventure · Licensed tour operator · Kazakhstan",
+  "place": "East Kazakhstan · Ridder"
+ },
+ "summer": {
+  "hero": {
+   "eyebrow": "Summer · May – October",
+   "h1": [
+    "Summer in the",
+    "*Kazakh Altai"
+   ],
+   "sub": "From a single day out to a week-long route across East Kazakhstan. Below: what we run and what it costs.",
+   "cta1": "Find a program",
+   "facts": [
+    [
+     "High mountains",
+     "late May to October"
+    ],
+    [
+     "Up to 4 guests",
+     "per vehicle"
+    ],
+    [
+     "Prices",
+     "per person"
+    ]
+   ]
+  },
+  "tailor": {
+   "eyebrow": "The main thing",
+   "h2": "A route<br>built for you",
+   "sub": "Katon-Karagay, Belukha, Lake Yazevoye, Rakhmanov Springs, Lake Markakol, Kiin-Kerish — we assemble a journey of 3 to 7+ days from these places, with accommodation, meals and airport transfer.",
+   "box_eyebrow": "Private",
+   "box_h3": "From 3 days to a week or more",
+   "box_p": "The plan and the price are worked out for your dates and group. A 7-day example, day by day, is on the home page.",
+   "btn": "See the route",
+   "price": "<b>From USD 1,000 per person</b> for multi-day journeys."
+  },
+  "day": {
+   "eyebrow": "One day",
+   "h2": "Jeep day trips<br>from Ridder",
+   "sub": "Out in the morning, back in the evening. Stops at viewpoints, short walks to lakes, lunch outdoors.",
+   "cards": [
+    [
+     "Radon Lake",
+     "A high-altitude lake under snowfields that last until midsummer. Our most requested route."
+    ],
+    [
+     "Zvezdny Pass",
+     "Up through cedar forest to a pass at 1,930 m. On a clear day you see snow ridges on the horizon."
+    ],
+    [
+     "Bogdanikha River Mouth",
+     "High plateaus and stone fields. Rarely visited, with a demanding road."
+    ],
+    [
+     "Cherepanovsky Belok",
+     "A drive to a summit with a full-circle view of the Western Altai ridges."
+    ],
+    [
+     "Prokhodnoy Belok · express",
+     "A half-day trip to the high country: a plateau and cedar forest."
+    ]
+   ],
+   "note": "Price per person with 4 guests in the vehicle. With fewer guests the price per person is higher: Radon Lake, for example, is 45,000 KZT with three guests and 65,000 KZT with two. Transfer from Ust-Kamenogorsk is priced separately."
+  },
+  "multi": {
+   "eyebrow": "With overnight stays",
+   "h2": "Several days<br>in the mountains",
+   "sub": "Price per person for the whole program, with 4 guests in the vehicle.",
+   "rows": [
+    [
+     "Maloulba Reservoir",
+     "A mountain reservoir with islands and bays. Camp on the shore, SUP boards. 2 days from 60,000 KZT, 3 days from 80,000 KZT."
+    ],
+    [
+     "Uba Waterfall",
+     "A fishing trip on the Uba river: taiga and grayling, tackle provided. 2 days from 65,000 KZT, 3 days from 90,000 KZT."
+    ],
+    [
+     "Katon-Karagay",
+     "2 to 4 days with nights in guesthouses. Maral deer farms, mountain villages, views of Belukha."
+    ],
+    [
+     "Expeditions",
+     "Demanding routes with several days of autonomy: the Shambala meteorite site, the Malaya Ulba – Cherepanikha loop. Preparation takes 2–4 weeks."
+    ]
+   ]
+  },
+  "act": {
+   "eyebrow": "More",
+   "h2": "On water, on horseback<br>and on foot",
+   "sub": "Book separately or add to a main program.",
+   "rows": [
+    [
+     "Fishing",
+     "From a day on the river to several days. Tackle provided. With a jet boat — from 100,000 KZT."
+    ],
+    [
+     "Rafting",
+     "Packrafts and boats with an instructor. The route is matched to the group’s experience."
+    ],
+    [
+     "Horse riding",
+     "Rides from two hours. Multi-day horse routes on request."
+    ],
+    [
+     "Hiking",
+     "Guided day hikes, from an easy walk to a full mountain day."
+    ],
+    [
+     "Outdoor dinner &amp; photo session",
+     "Dinner or breakfast cooked by a field kitchen, a table set in the mountains, a photo shoot."
+    ],
+    [
+     "Off-road",
+     "Fords, mud and rocky climbs — for those who come for the driving. Spring and autumn."
+    ],
+    [
+     "E-bikes",
+     "Short rides around the area."
+    ],
+    [
+     "Buggies &amp; quad bikes",
+     "Subject to vehicles being available on your dates."
+    ]
+   ],
+   "note": "Corporate trips are built from the same parts — tell us the brief and the number of people."
+  }
+ },
+ "winter": {
+  "hero": {
+   "eyebrow": "Winter · December – March",
+   "h1": [
+    "Winter in the",
+    "*Western Altai"
+   ],
+   "sub": "Two programs near Ridder: trips by snowcat and by snowmobile. This is not about skiing — it is how you get into the mountains in winter, to places you cannot reach otherwise.",
+   "cta1": "Ask for dates and prices",
+   "facts": [
+    [
+     "December – March",
+     "season"
+    ],
+    [
+     "Ridder",
+     "120 km from Ust-Kamenogorsk"
+    ],
+    [
+     "Prices",
+     "to be confirmed"
+    ]
+   ]
+  },
+  "intro": {
+   "eyebrow": "Winter programs",
+   "h2": "Snowcats<br>and snowmobiles",
+   "sub": "This season’s programs are still being put together. Leave a request and we will send dates and prices as soon as we have them."
+  },
+  "cards": [
+   {
+    "pill": "Snowcat",
+    "title": "By snowcat<br>into the mountains",
+    "items": [
+     "A sightseeing trip: we go to see the winter mountains, not to ski",
+     "Places that can only be reached in winter on special vehicles",
+     "No skis or training needed"
+    ],
+    "fine": "Run with a partner snowcat operator. Price and schedule on request."
+   },
+   {
+    "pill": "Snowmobiles",
+    "title": "By<br>snowmobile",
+    "items": [
+     "Utility snowmobiles at an easy pace",
+     "Guided one-day routes",
+     "Briefing before the ride"
+    ],
+    "fine": "This program is being launched. Price and schedule on request."
+   }
+  ],
+  "more": {
+   "eyebrow": "With the program",
+   "h2": "What else<br>we arrange",
+   "items": [
+    [
+     "Accommodation",
+     "We find and book a place to stay in and around Ridder for your dates."
+    ],
+    [
+     "Transfer",
+     "Pick-up from Ust-Kamenogorsk airport or railway station and the drive back."
+    ],
+    [
+     "A program for your group",
+     "Friends, a family or a company trip — we plan the days around your group."
+    ]
+   ]
+  },
+  "cta": "Ask for dates and prices"
+ }
 }

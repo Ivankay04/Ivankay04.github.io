@@ -16,16 +16,18 @@ TOURS = {'ru': {'radon': 'tury/radonovoe-ozero.html', 'zvezdny': 'tury/pereval-z
                 'malo': 'tury/maloulba-reservoir.html', 'uba': 'tury/ubinsky-waterfall.html', 'katon': 'tury/katon-karagay-expedition.html'}}
 TOURS['zh'] = TOURS['en']; TOURS['kk'] = TOURS['ru']
 # Картинки. Слоты assets/v2/* заменяются файлом с тем же именем — пересборка не нужна.
-HERO = {'home': 'assets/pilot/hero-road.webp', 'summer': 'assets/pilot/season-summer.webp', 'winter': 'assets/pilot/season-winter.webp'}
-STOPS = ['stop-katon-karagay', 'stop-yazevoye', 'stop-rakhmanovskie', 'stop-markakol', 'stop-kiin-kerish']
-STAYS = [('stay-teremok-rakhmanovskie', 'Teremok'), ('stay-aituma-markakol', 'Aituma'), ('stay-yazevoye-cabins', ''),
-         ('stay-berel-rails', 'Berel Rails'), ('stay-alasha-katon-karagay', 'Alasha'), ('stay-nomad-zaisan', 'Nomad')]
+HERO = {'home': 'assets/pilot/hero-road.webp', 'summer': 'assets/pilot/season-summer.webp', 'winter': 'assets/pilot/season-winter.jpg'}
+STOPS = ['assets/pilot/stop-katon-karagay.webp', 'assets/pilot/stop-yazevoye.webp', 'assets/photo-radonlake.jpg', 'assets/pilot/stop-markakol.webp', 'assets/photo-maloulba.jpg']
+STAYS = [('bearlog-hotel.webp', 'Bear Log'), ('altai-resort.webp', 'Altai Resort'), ('stay-aituma-markakol.webp', 'Aituma'),
+         ('stay-alasha-katon-karagay.jpg', 'Alasha'), ('teremok-rahman.webp', 'Teremok'), ('camp.jpg', '')]
 DAY = [('radon', 'assets/photo-radonlake.jpg', 35000), ('zvezdny', 'assets/photo-zvezdny.jpg', 30000), ('bogd', 'assets/photo-bogdaniha.jpg', 40000),
        (None, 'assets/v2/day-cherepanovsky.jpg', 30000), (None, 'assets/v2/day-prohodnoy.jpg', 25000)]
 MULTI = [('malo', 60000), ('uba', 65000), ('katon', 160000), (None, 0)]
 ACT = [60000, 80000, 20000, 20000, 50000, 50000, 0, 0]
-WINTER_SLOTS = ['assets/v2/winter-catski.jpg', 'assets/v2/winter-snowmobile.jpg']
+WINTER_SLOTS = ['assets/v2/winter-catski.jpeg', 'assets/v2/winter-snowmobile.jpg']
 TEAM = [('photo-ivandirector.jpg', 'center top'), ('photo-gidalexandr.jpg', 'center 10%'), ('photo-gidvladislav.jpg', 'center 15%'), ('photo-admin-sofia.jpg', 'center 5%')]
+LEGAL = {'ru': 'ИП Кайгородов · ИИН 040204551300 · Юр. адрес: г. Риддер, проспект Независимости, д. 27, кв/офис 2 · Факт. адрес: г. Риддер, 3-й мкр, д. 9 (кафе «Милано») · АО «Kaspi Bank», БИК CASPKZKA, ИИК KZ40722S000042445158, Кбе 19 · Тел.: +7 777 066 02 60 · ivan.kaygorodov.2000@mail.ru · СНР (упрощённая декларация), не плательщик НДС',
+         'en': 'IE Kaigorodov · IIN 040204551300 · Registered address: 27 Nezavisimosti Ave., office 2, Ridder, Kazakhstan · Office: 3rd microdistrict, 9, Ridder · Kaspi Bank JSC, BIC CASPKZKA, IBAN KZ40722S000042445158, Kbe 19 · Tel.: +7 777 066 02 60 · ivan.kaygorodov.2000@mail.ru · Simplified tax regime, not a VAT payer'}
 METRIKA = open(os.path.join(ROOT, 'build/metrika.html'), encoding='utf-8').read()
 
 def canon(lang, page):
@@ -158,7 +160,7 @@ def contact_footer(c, lang, R):
 <div><h5>{ft["nav"]}</h5><ul><li><a href="{R}{P["summer"]}">{n["summer"]}</a></li><li><a href="{R}{P["winter"]}">{n["winter"]}</a></li><li><a href="{R}{P["home"]}#journey">{n["journey"]}</a></li><li><a href="{R}{c["blog_url"]}">{n["blog"]}</a></li><li><a href="{R}{P["home"]}#about">{n["about"]}</a></li></ul></div>
 <div><h5>{ft["contact"]}</h5><ul><li><a href="https://wa.me/77770650260">+7 777 065 02 60</a></li><li><a href="mailto:asferia@mail.ru">asferia@mail.ru</a></li></ul></div>
 <div><h5>{ft["social"]}</h5><ul><li><a href="https://www.instagram.com/asferia_adventure/">Instagram</a></li><li><a href="https://t.me/asferiakazakhstan">Telegram</a></li><li><a href="https://wa.me/77770650260">WhatsApp</a></li></ul></div>
-</div><div class="footer-bottom"><div>{ft["copy"]}</div><div class="made">{ft["place"]}</div></div></div></footer>
+</div><div class="footer-bottom"><div>{ft["copy"]}</div><div class="made">{ft["place"]}</div></div><div class="legal">{LEGAL["ru" if lang in ("ru", "kk") else "en"]}</div></div></footer>
 <div class="lightbox" id="lightbox"><button class="lightbox-close">✕</button><img id="lightbox-img" src="" alt=""></div>
 <script src="{R}js/site.js" defer></script>
 </body></html>
@@ -182,7 +184,7 @@ def home(c, lang, R):
         return f'''<article class="season"><div class="card-bg" style="background-image:url('{R}{HERO[page]}')"></div><div class="scrim"></div><div class="when">{when}</div><h3>{x["title"]}</h3><ul>{items}</ul>{fine}<a href="{R}{P[page]}" class="btn {btn}">{x["cta"]} <span class="arrow">→</span></a></article>'''
     o += f'<section class="section" id="seasons"><div class="container">{sec_head(s)}<div class="seasons reveal-stagger">{season(s["summer"], "summer", "btn--tan")}{season(s["winter"], "winter", "btn--ghost")}</div></div></section>\n'
     j = c['journey']; cls = ['s-a', 's-b', 's-c', 's-d', 's-e']
-    stops = ''.join(card(R, f'assets/pilot/{STOPS[i]}.webp', p, t, d, cls=cls[i]) for i, (p, t, d) in enumerate(j['stops']))
+    stops = ''.join(card(R, STOPS[i], p, t, d, cls=cls[i]) for i, (p, t, d) in enumerate(j['stops']))
     k = j['cta']; pills = ''.join(f'<span>{x}</span>' for x in k['pills'])
     stops += f'<div class="stop-cta s-cta"><div class="eyebrow">{k["eyebrow"]}</div><h3>{k["h3"]}</h3><div class="day-pills">{pills}</div><p>{k["p"]}</p><div class="ctas"><a href="#booking" class="btn btn--tan">{k["btn"]} <span class="arrow">→</span></a></div><div class="price-line">{k["price"]}</div></div>'
     o += f'<section class="section" id="journey" style="padding-top:40px;"><div class="container">{sec_head(j)}<div class="stops reveal-stagger">{stops}</div></div></section>\n'
@@ -195,7 +197,7 @@ def home(c, lang, R):
     v = c['services']; stays = ''
     for (f, n), cap in zip(STAYS, v['stays']):
         ttl = n or cap.split(',')[0]; rest = cap if n else ','.join(cap.split(',')[1:]).strip()
-        stays += f'<figure class="stay"><img src="{R}assets/pilot/{f}.webp" alt="{ttl} — {cap}" loading="lazy"><figcaption><b>{ttl}</b>{rest}</figcaption></figure>'
+        stays += f'<figure class="stay"><img src="{R}assets/pilot/{f}" alt="{ttl} — {cap}" loading="lazy"><figcaption><b>{ttl}</b>{rest}</figcaption></figure>'
     o += f'<section class="section" id="services"><div class="container">{sec_head(v)}{feats(v["items"])}<p class="arrange-foot reveal">{v["foot"]}</p><div class="stay-head reveal"><div><div class="eyebrow">{v["stay_eyebrow"]}</div><h3>{v["stay_h3"]}</h3></div><p>{v["stay_p"]}</p></div><div class="stay-grid reveal-stagger">{stays}</div></div></section>\n'
     h = c['how']; steps = ''.join(f'<div class="step"><div class="s-num">{i + 1:02d}</div><h3>{t}</h3><p>{p}</p></div>' for i, (t, p) in enumerate(h['steps']))
     o += f'<section class="section" id="how" style="padding-top:40px;"><div class="container">{sec_head(h)}<div class="steps reveal-stagger">{steps}</div></div></section>\n'

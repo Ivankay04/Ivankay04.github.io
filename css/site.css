@@ -755,3 +755,5 @@ html[lang="zh-Hans"] .hero h1.hero-long{font-size:clamp(40px,6.4vw,96px);line-he
 .season > .slot{position:absolute;z-index:0}
 .season h3{font-size:clamp(36px,4.2vw,62px);overflow-wrap:break-word}
 .s-c .tour-info h3,.s-d .tour-info h3{font-size:clamp(17px,1.55vw,24px);overflow-wrap:break-word}
+.legal{margin-top:18px;padding-top:16px;border-top:1px solid rgba(245,239,230,.08);font-size:11px;line-height:1.7;color:rgba(245,239,230,.4)}
+.season > .slot{position:absolute!important;z-index:0!important}
