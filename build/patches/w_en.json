@@ -1,0 +1,22 @@
+{
+"meta.winter": {"title": "Winter in East Kazakhstan — Snowcat and Snowmobile Trips from Ridder | Asferia", "desc": "Winter trips near Ridder from 10 December: snowcat (up to 12 guests) and snowmobiles (2–6 guests), about 4 hours in the mountains, a climb to a pass at about 2,000 m, lunch at the top. Snowcat from 60,000 KZT, snowmobiles from 80,000 KZT per person."},
+"seasons.winter.items": ["Snowcat trips to a pass at about 2,000 m", "Snowmobiles: two guests per machine, driven by our guides", "Grilled lunch and hot tea at the top"],
+"seasons.winter.when": ["December – March", "From 10 December"],
+"seasons.winter.fine": "Snowcat from 60,000 KZT, snowmobiles from 80,000 KZT per person. No skiing involved.",
+"form.options.winter": ["Snowcat · shared group", "Private snowcat for your group", "Snowmobiles", "New Year dates", "Not sure yet — advise me"],
+"winter": {
+ "hero": {"eyebrow": "Winter · December – March", "h1": ["Winter in the", "*Western Altai"], "sub": "In winter, snowcats cut a track straight across the mountains. We drive up to passes and ridges that in summer you can only reach on foot, and much more slowly. No skis or training needed.", "cta1": "Book a trip",
+  "facts": [["December – March", "season opens 10 December, once the snow is down"], ["About 4 hours", "in the mountains"], ["From 60,000 KZT", "per person"]]},
+ "intro": {"eyebrow": "Two programs", "h2": "Snowcat<br>and snowmobiles", "sub": "Both follow the same route: a 10–15 km climb to a pass at about 2,000 m, viewpoints, a stop for lunch and back down the same way. The difference is the vehicle and the group size."},
+ "cards": [
+  {"pill": "Snowcat", "meta": "Up to 12 guests · ~4 h", "title": "By snowcat<br>into the mountains", "items": ["A climate-controlled cabin; the whole group rides together", "A 10–15 km climb to a pass at about 2,000 m, with viewpoints", "A stop at the top: grilled lunch and hot tea"], "price": "from 60,000 KZT per person", "price_note": "in a group of 10–12", "extra": "Private snowcat for your own group — on request."},
+  {"pill": "Snowmobiles", "meta": "2–6 guests · ~4 h", "title": "By<br>snowmobile", "items": ["Two guests per snowmobile, driven by our guides", "A faster climb than by snowcat, with more pace and extra stops", "Viewpoints and lunch at the top"], "price": "from 80,000 KZT per person", "price_note": "in a group of 4–6", "extra": ""}],
+ "media": {"eyebrow": "From the trips", "h2": "What it<br>looks like", "sub": "Passes, viewpoints and the stop at the top — footage from the 2026/27 season.", "video_soon": "Trip film · December 2026", "photo_soon": "Shoot · December"},
+ "route": {"eyebrow": "How the day goes", "h2": "Half a day<br>in the mountains", "sub": "The whole trip from Ridder takes 5–6 hours. We choose the starting point by the weather and where the vehicles are, and confirm it when we confirm your date.",
+  "steps": [["01", "Transfer", "About 45 minutes from Ridder to the base in our 4WDs. The vehicles and guides are waiting there."], ["02", "The climb", "10–15 km across the mountains. About an hour by snowcat, faster by snowmobile."], ["03", "Viewpoints", "Stops on the way up for the views of the ridges and photos."], ["04", "The pass", "About 2,000 m. Tables, a grill, lunch and hot tea, time to walk around."], ["05", "Descent", "Back the same way to the base, then the transfer to Ridder."]],
+  "sum": ["5–6 hours", "the whole trip from Ridder", "About 4 of them in the mountains."]},
+ "pricing": {"eyebrow": "Prices", "h2": "Why the price depends<br>on group size", "sub": "The cost of a trip — vehicles, drivers, guide — is almost the same whether 4 people go or 12. It is shared between the guests, so the bigger the group, the less each pays. The “from” price is for a full group. If there are fewer of you, we will quote an exact price for your group or offer a place in a shared weekend group.",
+  "inc_title": "What is included", "inc": ["Vehicles and fuel", "Guide and snowmobile drivers", "Transfer from Ridder to the start and back", "Lunch at the top and hot tea", "Gear at no extra cost"], "extra": "<b>Not included:</b> transfer from Ust-Kamenogorsk or from your hotel or resort — quoted on request."},
+ "notes": [["New Year", "New Year dates go first — book early."], ["Company trips", "A private snowcat for a company of up to 12, weekdays included."], ["Accommodation", "We find and book a place to stay in and around Ridder for your dates."]],
+ "cta": "Book a trip"}
+}

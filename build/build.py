@@ -24,10 +24,10 @@ DAY = [('radon', 'assets/photo-radonlake.jpg', 35000), ('zvezdny', 'assets/photo
        (None, 'assets/v2/day-cherepanovsky.jpg', 30000), (None, 'assets/v2/day-prohodnoy.jpg', 25000)]
 MULTI = [('malo', 60000), ('uba', 65000), ('katon', 160000), (None, 0)]
 ACT = [60000, 80000, 20000, 20000, 50000, 50000, 0, 0]
-WINTER_SLOTS = ['assets/v2/winter-catski.jpeg', 'assets/v2/winter-snowmobile.jpg']
+WINTER_SLOTS = ['assets/v2/winter-catski.jpg', 'assets/v2/winter-snowmobile.jpg']
 TEAM = [('photo-ivandirector.jpg', 'center top'), ('photo-gidalexandr.jpg', 'center 10%'), ('photo-gidvladislav.jpg', 'center 15%'), ('photo-admin-sofia.jpg', 'center 5%')]
-LEGAL = {'ru': 'ИП Кайгородов · ИИН 040204551300 · Юр. адрес: г. Риддер, проспект Независимости, д. 27, кв/офис 2 · Факт. адрес: г. Риддер, 3-й мкр, д. 9 (кафе «Милано») · АО «Kaspi Bank», БИК CASPKZKA, ИИК KZ40722S000042445158, Кбе 19 · Тел.: +7 777 066 02 60 · ivan.kaygorodov.2000@mail.ru · СНР (упрощённая декларация), не плательщик НДС',
-         'en': 'IE Kaigorodov · IIN 040204551300 · Registered address: 27 Nezavisimosti Ave., office 2, Ridder, Kazakhstan · Office: 3rd microdistrict, 9, Ridder · Kaspi Bank JSC, BIC CASPKZKA, IBAN KZ40722S000042445158, Kbe 19 · Tel.: +7 777 066 02 60 · ivan.kaygorodov.2000@mail.ru · Simplified tax regime, not a VAT payer'}
+LEGAL = {'ru': 'ИП Кайгородов · ИИН 040204551300 · Юр. адрес: г. Риддер, проспект Независимости, д. 27, кв/офис 2 · Факт. адрес: г. Риддер, 3-й мкр, д. 9 (кафе «Милано») · АО «Kaspi Bank», БИК CASPKZKA, ИИК KZ40722S000042445158, Кбе 19 · Тел.: +7 777 065 02 60 · ivan.kaygorodov.2000@mail.ru · СНР (упрощённая декларация), не плательщик НДС',
+         'en': 'IE Kaigorodov · IIN 040204551300 · Registered address: 27 Nezavisimosti Ave., office 2, Ridder, Kazakhstan · Office: 3rd microdistrict, 9, Ridder · Kaspi Bank JSC, BIC CASPKZKA, IBAN KZ40722S000042445158, Kbe 19 · Tel.: +7 777 065 02 60 · ivan.kaygorodov.2000@mail.ru · Simplified tax regime, not a VAT payer'}
 METRIKA = open(os.path.join(ROOT, 'build/metrika.html'), encoding='utf-8').read()
 
 def canon(lang, page):
@@ -128,7 +128,7 @@ def card(R, img, pill, title, desc, href=None, cls='', pillcls=''):
 def booking(c, lang, page):
     f = c['form']
     opts = ''.join(f'<option>{o}</option>' for o in f['options'][page])
-    ppl = ''.join(f'<option>{o}</option>' for o in ['1', '2', '3', '4', '5–8', '8+'])
+    ppl = ''.join(f'<option>{o}</option>' for o in ['1', '2', '3', '4', '5–8', '9–12', '12+'])
     ben = ''.join(f'<li>{b}</li>' for b in f['benefits'])
     intl = lang in ('en', 'zh')
     return f'''<section class="booking" id="booking"><div class="booking-bg"></div><div class="container"><div class="booking-grid">
@@ -243,13 +243,34 @@ def summer(c, lang, R):
 def winter(c, lang, R):
     w = c['winter']
     o = hero(w['hero'], 'winter', R, short=True)
+    # Две программы
     cards = ''
     for x, img in zip(w['cards'], WINTER_SLOTS):
         items = ''.join(f'<li>{i}</li>' for i in x['items'])
-        cards += f'''<article class="season"><div class="slot">{img}</div><div class="card-bg" style="background-image:url('{R}{img}')"></div><div class="scrim"></div><div class="when"><span class="pill">{x["pill"]}</span></div><h3>{x["title"]}</h3><ul>{items}</ul><p class="fine">{x["fine"]}</p><a href="#booking" class="btn btn--tan">{w["cta"]} <span class="arrow">→</span></a></article>'''
+        extra = f'<p class="fine">{x["extra"]}</p>' if x.get('extra') else ''
+        cards += f'''<article class="season"><div class="card-bg" style="background-image:url('{R}{img}')"></div><div class="scrim"></div><div class="when"><span class="pill">{x["pill"]}</span><span class="pill">{x["meta"]}</span></div><h3>{x["title"]}</h3><ul>{items}</ul><div class="w-price"><b>{x["price"]}</b><span>{x["price_note"]}</span></div>{extra}<a href="#booking" class="btn btn--tan">{w["cta"]} <span class="arrow">→</span></a></article>'''
     o += f'<section class="section" id="programs"><div class="container">{sec_head(w["intro"])}<div class="seasons reveal-stagger">{cards}</div></div></section>\n'
-    mo = w['more']
-    o += f'<section class="section" id="more" style="padding-top:40px;"><div class="container">{sec_head(mo)}{feats(mo["items"])}</div></section>\n'
+    # Видео и фото. Клип: положить assets/v2/winter-clip.mp4 и пересобрать. Фото: assets/v2/winter-01…06.jpg, пересборка не нужна.
+    m = w['media']
+    poster = f"{R}{HERO['winter']}"
+    if os.path.exists(os.path.join(ROOT, 'assets/v2/winter-clip.mp4')):
+        video = f'<div class="media-video reveal"><video controls playsinline preload="metadata" poster="{poster}"><source src="{R}assets/v2/winter-clip.mp4" type="video/mp4"></video></div>'
+    else:
+        video = f'''<div class="media-video soon reveal"><div class="card-bg" style="background-image:url('{poster}')"></div><div class="scrim"></div><div class="play"></div><div class="media-label">{m["video_soon"]}</div></div>'''
+    tiles = ''.join(f'''<div class="m-tile"><div class="m-ph"><span>{m["photo_soon"]}</span></div><div class="card-bg" style="background-image:url('{R}assets/v2/winter-{i:02d}.jpg')"></div></div>''' for i in range(1, 7))
+    o += f'<section class="section" id="media" style="padding-top:40px;"><div class="container">{sec_head(m)}{video}<div class="media-grid reveal-stagger">{tiles}</div></div></section>\n'
+    # Как проходит выезд
+    r = w['route']
+    days = ''.join(f'<div class="day"><div class="d-num">{n}</div><h4>{t}</h4><p>{p}</p></div>' for n, t, p in r['steps'])
+    days += f'<div class="day sum"><div class="big">{r["sum"][0]}</div><div class="small">{r["sum"][1]}</div><p>{r["sum"][2]}</p></div>'
+    o += f'<section class="section tight" id="route"><div class="container">{sec_head(r)}<div class="route-grid three reveal-stagger">{days}</div></div></section>\n'
+    # Цена и что входит
+    p = w['pricing']
+    inc = ''.join(f'<li>{i}</li>' for i in p['inc'])
+    o += f'<section class="section" id="pricing" style="padding-top:40px;"><div class="container"><div class="split">{sec_head(p)}<div class="stop-cta reveal"><div class="eyebrow">{p["inc_title"]}</div><ul class="inc">{inc}</ul><div class="price-line">{p["extra"]}</div></div></div></div></section>\n'
+    # Короткие плашки
+    notes = ''.join(f'<div class="note-card"><h4>{t}</h4><p>{d}</p></div>' for t, d in w['notes'])
+    o += f'<section class="section" id="notes" style="padding-top:0;"><div class="container"><div class="notes reveal-stagger">{notes}</div></div></section>\n'
     return o
 
 BODY = {'home': home, 'summer': summer, 'winter': winter}
