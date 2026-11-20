@@ -783,3 +783,14 @@ html[lang="zh-Hans"] .hero h1.hero-long{font-size:clamp(40px,6.4vw,96px);line-he
 @media(max-width:900px){.media-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}}
 #programs .season .scrim{background:linear-gradient(180deg,rgba(0,0,0,.2) 0%,rgba(0,0,0,.55) 38%,rgba(0,0,0,.9) 100%)}
 #pricing .section-head h2{font-size:clamp(36px,4.4vw,60px)}
+/* freeride + winter home */
+.hero-bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cards.eq3{grid-template-columns:repeat(3,1fr)}
+.cards.eq3 .tour-card:first-child{grid-column:auto}
+@media(max-width:900px){.cards.eq3{grid-template-columns:1fr}}
+.season > .m-ph{position:absolute!important;z-index:0!important}
+.fr-cta{flex-direction:row!important;align-items:center;justify-content:space-between;gap:32px;padding:36px 40px}
+.fr-cta h3{margin:8px 0 8px}
+.fr-cta p{margin:0}
+.fr-cta .btn{flex-shrink:0;position:relative;z-index:2}
+@media(max-width:768px){.fr-cta{flex-direction:column!important;align-items:flex-start}}

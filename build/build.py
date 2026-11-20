@@ -4,10 +4,10 @@ import json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = 'https://asferia.kz/'
 LANGS = ['ru', 'en', 'zh', 'kk']
-PATHS = {'ru': {'home': 'index.html', 'summer': 'leto.html', 'winter': 'zima.html'},
-         'en': {'home': 'en.html', 'summer': 'en/summer.html', 'winter': 'en/winter.html'},
-         'zh': {'home': 'zh/index.html', 'summer': 'zh/summer.html', 'winter': 'zh/winter.html'},
-         'kk': {'home': 'kk/index.html', 'summer': 'kk/summer.html', 'winter': 'kk/winter.html'}}
+PATHS = {'ru': {'home': 'index.html', 'summer': 'leto.html', 'winter': 'zima.html', 'freeride': 'freeride.html'},
+         'en': {'home': 'en.html', 'summer': 'en/summer.html', 'winter': 'en/winter.html', 'freeride': 'en/freeride.html'},
+         'zh': {'home': 'zh/index.html', 'summer': 'zh/summer.html', 'winter': 'zh/winter.html', 'freeride': 'zh/freeride.html'},
+         'kk': {'home': 'kk/index.html', 'summer': 'kk/summer.html', 'winter': 'kk/winter.html', 'freeride': 'kk/freeride.html'}}
 LABEL = {'ru': 'RU', 'en': 'EN', 'zh': '中文', 'kk': 'ҚАЗ'}
 HTML_LANG = {'ru': 'ru', 'en': 'en', 'zh': 'zh-Hans', 'kk': 'kk'}
 TOURS = {'ru': {'radon': 'tury/radonovoe-ozero.html', 'zvezdny': 'tury/pereval-zvezdny.html', 'bogd': 'tury/ustye-bogdaniha.html',
@@ -17,6 +17,15 @@ TOURS = {'ru': {'radon': 'tury/radonovoe-ozero.html', 'zvezdny': 'tury/pereval-z
 TOURS['zh'] = TOURS['en']; TOURS['kk'] = TOURS['ru']
 # Картинки. Слоты assets/v2/* заменяются файлом с тем же именем — пересборка не нужна.
 HERO = {'home': 'assets/pilot/hero-road.webp', 'summer': 'assets/pilot/season-summer.webp', 'winter': 'assets/pilot/season-winter.jpg'}
+# ===== Сезон главной: 'winter' — с ноября по март, 'summer' — с апреля. Поменять и пересобрать.
+SEASON_MODE = 'winter'
+# ===== Цены фрирайда, ₸ за человека в день. 0 — на сайте «цена по запросу».
+FREERIDE_PRICE = {'cat': 0, 'sled': 0}
+def _slot(path, fallback):
+    return path if os.path.exists(os.path.join(ROOT, path)) else fallback
+HERO['freeride'] = _slot('assets/v2/freeride-hero.jpg', 'assets/v2/winter-catski.jpg')
+if SEASON_MODE == 'winter':
+    HERO['home'] = 'assets/pilot/season-winter.jpg'
 STOPS = ['assets/pilot/stop-katon-karagay.webp', 'assets/pilot/stop-yazevoye.webp', 'assets/photo-radonlake.jpg', 'assets/pilot/stop-markakol.webp', 'assets/photo-maloulba.jpg']
 STAYS = [('bearlog-hotel.webp', 'Bear Log'), ('altai-resort.webp', 'Altai Resort'), ('stay-aituma-markakol.webp', 'Aituma'),
          ('stay-alasha-katon-karagay.jpg', 'Alasha'), ('teremok-rahman.webp', 'Teremok'), ('camp.jpg', '')]
@@ -62,6 +71,9 @@ def head(c, lang, page, R):
         faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": re.sub(r'<[^>]+>', '', a)}} for q, a in c['faq']['items']]}
         ld = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>\n' for x in (org, faq))
+    if page == 'freeride':
+        ld = '<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": re.sub(r'<[^>]+>', '', a)}} for q, a in c['freeride']['faq']['items']]}, ensure_ascii=False) + '</script>\n'
     return f'''<!DOCTYPE html>
 <html lang="{HTML_LANG[lang]}">
 <head>
@@ -96,19 +108,24 @@ def nav(c, lang, page, R):
     return f'''<nav class="nav" id="nav"><div class="container nav-row">
 <a href="{home}" class="logo">ASFERIA<span>·</span>ADVENTURE</a>
 <div class="nav-links" id="navLinks">
-<a href="{R}{P["summer"]}">{n["summer"]}</a><a href="{R}{P["winter"]}">{n["winter"]}</a><a href="{home}#journey">{n["journey"]}</a><a href="{home}#about">{n["about"]}</a><a href="{R}{c["blog_url"]}">{n["blog"]}</a><a href="#contact">{n["contact"]}</a>
+<a href="{R}{P["summer"]}">{n["summer"]}</a><a href="{R}{P["winter"]}">{n["winter"]}</a><a href="{R}{P["freeride"]}">{n["freeride"]}</a><a href="{home}#journey">{n["journey"]}</a><a href="{home}#about">{n["about"]}</a><a href="{R}{c["blog_url"]}">{n["blog"]}</a><a href="#contact">{n["contact"]}</a>
 <span class="langs">{langs}</span>
 </div>
 <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
 </div></nav>
 '''
 
+def hero_video(page, R):
+    v = f'assets/v2/hero-{page}.mp4'
+    if not os.path.exists(os.path.join(ROOT, v)): return ''
+    return f'<video autoplay muted loop playsinline preload="metadata" poster="{R}{HERO[page]}"><source src="{R}{v}" type="video/mp4"></video>'
+
 def hero(h, page, R, short=False):
     lines = '<br>'.join(f'<span class="accent">{x[1:]}</span>' if x.startswith('*') else x for x in h['h1'])
     facts = ''.join(f'<div><b>{b}</b> {t}</div>' for b, t in h['facts'])
     ctas = f'<div class="ctas reveal"><a href="#booking" class="btn btn--tan">{h["cta1"]} <span class="arrow">→</span></a>' + (f'<a href="{h["cta2_href"]}" class="btn btn--ghost">{h["cta2"]}</a>' if h.get('cta2') else '') + '</div>'
     return f'''<section class="hero{" hero--short" if short else ""}" id="top">
-<div class="hero-bg" id="heroBg" style="background-image:url('{R}{HERO[page]}')"></div>
+<div class="hero-bg" id="heroBg" style="background-image:url('{R}{HERO[page]}')">{hero_video(page, R)}</div>
 <div class="container hero-content">
 <div class="eyebrow reveal">{h["eyebrow"]}</div>
 <h1 class="reveal hero-long" id="heroHeadline">{lines}</h1>
@@ -157,7 +174,7 @@ def contact_footer(c, lang, R):
 <div class="contact-channels reveal reveal-r">{ch}</div></div></div></section>
 <footer class="footer"><div class="container"><div class="footer-grid">
 <div><div class="logo">ASFERIA<span>·</span>ADVENTURE</div><div class="tag">{ft["tag"]}</div></div>
-<div><h5>{ft["nav"]}</h5><ul><li><a href="{R}{P["summer"]}">{n["summer"]}</a></li><li><a href="{R}{P["winter"]}">{n["winter"]}</a></li><li><a href="{R}{P["home"]}#journey">{n["journey"]}</a></li><li><a href="{R}{c["blog_url"]}">{n["blog"]}</a></li><li><a href="{R}{P["home"]}#about">{n["about"]}</a></li></ul></div>
+<div><h5>{ft["nav"]}</h5><ul><li><a href="{R}{P["summer"]}">{n["summer"]}</a></li><li><a href="{R}{P["winter"]}">{n["winter"]}</a></li><li><a href="{R}{P["freeride"]}">{n["freeride"]}</a></li><li><a href="{R}{P["home"]}#journey">{n["journey"]}</a></li><li><a href="{R}{c["blog_url"]}">{n["blog"]}</a></li><li><a href="{R}{P["home"]}#about">{n["about"]}</a></li></ul></div>
 <div><h5>{ft["contact"]}</h5><ul><li><a href="https://wa.me/77770650260">+7 777 065 02 60</a></li><li><a href="mailto:asferia@mail.ru">asferia@mail.ru</a></li></ul></div>
 <div><h5>{ft["social"]}</h5><ul><li><a href="https://www.instagram.com/asferia_adventure/">Instagram</a></li><li><a href="https://t.me/asferiakazakhstan">Telegram</a></li><li><a href="https://wa.me/77770650260">WhatsApp</a></li></ul></div>
 </div><div class="footer-bottom"><div>{ft["copy"]}</div><div class="made">{ft["place"]}</div></div><div class="legal">{LEGAL["ru" if lang in ("ru", "kk") else "en"]}</div></div></footer>
@@ -170,7 +187,8 @@ def feats(items):
     return '<div class="features-grid three reveal-stagger">' + ''.join(f'<div class="feature"><span class="num">{i + 1:02d}</span><h3>{t}</h3><p>{p}</p></div>' for i, (t, p) in enumerate(items)) + '</div>'
 
 def home(c, lang, R):
-    P = PATHS[lang]; o = hero(dict(c['hero'], cta2_href='#seasons'), 'home', R)
+    P = PATHS[lang]; W = SEASON_MODE == 'winter' and 'winter_home' in c
+    o = hero(dict(c['winter_home']['hero'] if W else c['hero'], cta2_href='#winter' if W else '#seasons'), 'home', R)
     st = ''
     for n, l, d in c['stats']:
         num = f'<span class="counter" data-to="{n}">0</span>' if n.isdigit() and len(n) < 4 else f'<span class="num-text">{n}</span>'
@@ -182,8 +200,11 @@ def home(c, lang, R):
         fine = f'<p class="fine">{x["fine"]}</p>' if x.get('fine') else ''
         items = ''.join(f'<li>{i}</li>' for i in x['items'])
         return f'''<article class="season"><div class="card-bg" style="background-image:url('{R}{HERO[page]}')"></div><div class="scrim"></div><div class="when">{when}</div><h3>{x["title"]}</h3><ul>{items}</ul>{fine}<a href="{R}{P[page]}" class="btn {btn}">{x["cta"]} <span class="arrow">→</span></a></article>'''
-    o += f'<section class="section" id="seasons"><div class="container">{sec_head(s)}<div class="seasons reveal-stagger">{season(s["summer"], "summer", "btn--tan")}{season(s["winter"], "winter", "btn--ghost")}</div></div></section>\n'
-    j = c['journey']; cls = ['s-a', 's-b', 's-c', 's-d', 's-e']
+    if W:
+        o += winter_block(c, lang, R)
+    else:
+        o += f'<section class="section" id="seasons"><div class="container">{sec_head(s)}<div class="seasons reveal-stagger">{season(s["summer"], "summer", "btn--tan")}{season(s["winter"], "winter", "btn--ghost")}</div></div></section>\n'
+    j = dict(c['journey'], **c['winter_home'].get('journey', {})) if W else c['journey']; cls = ['s-a', 's-b', 's-c', 's-d', 's-e']
     stops = ''.join(card(R, STOPS[i], p, t, d, cls=cls[i]) for i, (p, t, d) in enumerate(j['stops']))
     k = j['cta']; pills = ''.join(f'<span>{x}</span>' for x in k['pills'])
     stops += f'<div class="stop-cta s-cta"><div class="eyebrow">{k["eyebrow"]}</div><h3>{k["h3"]}</h3><div class="day-pills">{pills}</div><p>{k["p"]}</p><div class="ctas"><a href="#booking" class="btn btn--tan">{k["btn"]} <span class="arrow">→</span></a></div><div class="price-line">{k["price"]}</div></div>'
@@ -250,6 +271,9 @@ def winter(c, lang, R):
         extra = f'<p class="fine">{x["extra"]}</p>' if x.get('extra') else ''
         cards += f'''<article class="season"><div class="card-bg" style="background-image:url('{R}{img}')"></div><div class="scrim"></div><div class="when"><span class="pill">{x["pill"]}</span><span class="pill">{x["meta"]}</span></div><h3>{x["title"]}</h3><ul>{items}</ul><div class="w-price"><b>{x["price"]}</b><span>{x["price_note"]}</span></div>{extra}<a href="#booking" class="btn btn--tan">{w["cta"]} <span class="arrow">→</span></a></article>'''
     o += f'<section class="section" id="programs"><div class="container">{sec_head(w["intro"])}<div class="seasons reveal-stagger">{cards}</div></div></section>\n'
+    fr = w.get('freeride_cta')
+    if fr:
+        o += f'<section class="section tight" style="padding-top:0;"><div class="container"><div class="stop-cta fr-cta reveal"><div><div class="eyebrow">{fr["eyebrow"]}</div><h3>{fr["h3"]}</h3><p>{fr["p"]}</p></div><a href="{R}{PATHS[lang]["freeride"]}" class="btn btn--tan">{fr["btn"]} <span class="arrow">→</span></a></div></div></section>\n'
     # Видео и фото. Клип: положить assets/v2/winter-clip.mp4 и пересобрать. Фото: assets/v2/winter-01…06.jpg, пересборка не нужна.
     m = w['media']
     poster = f"{R}{HERO['winter']}"
@@ -273,13 +297,54 @@ def winter(c, lang, R):
     o += f'<section class="section" id="notes" style="padding-top:0;"><div class="container"><div class="notes reveal-stagger">{notes}</div></div></section>\n'
     return o
 
-BODY = {'home': home, 'summer': summer, 'winter': winter}
+def media_block(m, R, prefix, poster, sid='media'):
+    # Клип: assets/v2/<prefix>-clip.mp4 (нужна пересборка). Фото: assets/v2/<prefix>-01…06.jpg (встают сами).
+    if os.path.exists(os.path.join(ROOT, f'assets/v2/{prefix}-clip.mp4')):
+        video = f'<div class="media-video reveal"><video controls playsinline preload="metadata" poster="{poster}"><source src="{R}assets/v2/{prefix}-clip.mp4" type="video/mp4"></video></div>'
+    else:
+        video = f'''<div class="media-video soon reveal"><div class="card-bg" style="background-image:url('{poster}')"></div><div class="scrim"></div><div class="play"></div><div class="media-label">{m["video_soon"]}</div></div>'''
+    tiles = ''.join(f'''<div class="m-tile"><div class="m-ph"><span>{m["photo_soon"]}</span></div><div class="card-bg" style="background-image:url('{R}assets/v2/{prefix}-{i:02d}.jpg')"></div></div>''' for i in range(1, 7))
+    return f'<section class="section" id="{sid}" style="padding-top:40px;"><div class="container">{sec_head(m)}{video}<div class="media-grid reveal-stagger">{tiles}</div></div></section>\n'
+
+def winter_block(c, lang, R):
+    b = c['winter_home']['block']; P = PATHS[lang]
+    imgs = ['assets/v2/winter-catski.jpg', 'assets/v2/winter-snowmobile.jpg', _slot('assets/v2/freeride-card.jpg', 'assets/pilot/season-winter.jpg')]
+    cards = ''
+    for (pill, title, desc, page), img in zip(b['cards'], imgs):
+        cards += f'''<a href="{R}{P[page]}" class="tour-card"><div class="m-ph"><span>{b["soon"]}</span></div><div class="card-bg" style="background-image:url('{R}{img}')"></div><div class="scrim"></div><div class="corners"><span class="pill price">{pill}</span></div><div class="tour-info"><h3>{title}</h3><div class="desc long">{desc}</div></div></a>'''
+    return f'<section class="section" id="winter"><div class="container">{sec_head(b)}<div class="cards eq3 reveal-stagger">{cards}</div><div style="margin-top:28px;"><a href="{R}{P["winter"]}" class="btn btn--ghost">{b["more"]} <span class="arrow">→</span></a></div></div></section>\n'
+
+def freeride(c, lang, R):
+    f = c['freeride']
+    o = hero(f['hero'], 'freeride', R, short=True)
+    cards = ''
+    for x, key in zip(f['cards'], ('cat', 'sled')):
+        items = ''.join(f'<li>{i}</li>' for i in x['items'])
+        pr = FREERIDE_PRICE.get(key)
+        pstr = price(c, pr) if pr else f['price_request']
+        cards += f'''<article class="season"><div class="m-ph"><span>{f["media"]["photo_soon"]}</span></div><div class="card-bg" style="background-image:url('{R}{_slot(f"assets/v2/freeride-{key}.jpg", {"cat": "assets/v2/winter-catski.jpg", "sled": "assets/v2/winter-snowmobile.jpg"}[key])}')"></div><div class="scrim"></div><div class="when"><span class="pill">{x["pill"]}</span><span class="pill">{x["meta"]}</span></div><h3>{x["title"]}</h3><ul>{items}</ul><div class="w-price"><b>{pstr}</b><span>{x["price_note"]}</span></div><a href="#booking" class="btn btn--tan">{f["cta"]} <span class="arrow">→</span></a></article>'''
+    o += f'<section class="section" id="programs"><div class="container">{sec_head(f["intro"])}<div class="seasons reveal-stagger">{cards}</div></div></section>\n'
+    wk = f['week']
+    days = ''.join(f'<div class="day"><div class="d-num">{n}</div><h4>{t}</h4><p>{p}</p></div>' for n, t, p in wk['steps'])
+    days += f'<div class="day sum"><div class="big">{wk["sum"][0]}</div><div class="small">{wk["sum"][1]}</div><p>{wk["sum"][2]}</p></div>'
+    o += f'<section class="section tight" id="week"><div class="container">{sec_head(wk)}<div class="route-grid three reveal-stagger">{days}</div><div class="route-note">{wk["note"]}</div></div></section>\n'
+    sf = f['safety']
+    o += f'<section class="section" id="safety" style="padding-top:40px;"><div class="container">{sec_head(sf)}{feats(sf["items"])}</div></section>\n'
+    sc = f['school']
+    rows = ''.join(f'<div class="row"><h3>{t}</h3><p>{d}</p><div class="pr">{pr}</div></div>' for t, d, pr in sc['rows'])
+    o += f'<section class="section" id="school" style="padding-top:40px;"><div class="container">{sec_head(sc)}<div class="rows reveal">{rows}</div><p class="note-line">{sc["note"]}</p></div></section>\n'
+    o += media_block(f['media'], R, 'freeride', f'{R}{HERO["freeride"]}')
+    q = f['faq']; qs = ''.join(f'<details><summary>{x}</summary><p>{y}</p></details>' for x, y in q['items'])
+    o += f'<section class="section" id="faq" style="padding-top:40px;"><div class="container">{sec_head(q)}<div class="faq reveal">{qs}</div></div></section>\n'
+    return o
+
+BODY = {'home': home, 'summer': summer, 'winter': winter, 'freeride': freeride}
 
 def main():
     urls = []
     for lang in LANGS:
         c = json.load(open(os.path.join(ROOT, 'build/content', lang + '.json'), encoding='utf-8'))
-        for page in ('home', 'summer', 'winter'):
+        for page in ('home', 'summer', 'winter', 'freeride'):
             path = PATHS[lang][page]; R = '../' * path.count('/')
             out = head(c, lang, page, R) + nav(c, lang, page, R) + BODY[page](c, lang, R) + booking(c, lang, page) + contact_footer(c, lang, R)
             full = os.path.join(ROOT, path); os.makedirs(os.path.dirname(full), exist_ok=True)

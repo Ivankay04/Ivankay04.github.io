@@ -1,0 +1,35 @@
+{
+"nav.freeride": "Freeride",
+"meta.freeride": {"title": "Freeride & Cat Skiing in Ridder, Kazakhstan — Snowcat and Snowmobile Drop-offs | Asferia", "desc": "Freeride near Ridder in the Western Altai, East Kazakhstan: cat skiing (5–8 runs a day, groups up to 12) and snowmobile drop-offs (8–10 runs a day, up to 6). Season mid-November to mid-April. Airport pick-up in Ust-Kamenogorsk, accommodation and week-long packages arranged."},
+"form.options.freeride": ["Cat skiing · 1 day", "Snowmobile drop-offs · 1 day", "Several days / full week", "Snowmobile school", "Not sure yet — advise me"],
+"winter.freeride_cta": {"eyebrow": "Do you ski or ride?", "h3": "Freeride in Ridder", "p": "Cat skiing and snowmobile drop-offs into untracked snow. One day, or a full week with accommodation and transfers.", "btn": "See freeride"},
+"winter_home": {
+ "hero": {"eyebrow": "East Kazakhstan · Western Altai · winter 2026/27", "h1": ["The Altai", "*in winter"], "sub": "Snowcat trips, snowmobiles and freeride near Ridder. We drive up to passes that in summer you reach on foot, and ride untracked powder. We meet you in Ust-Kamenogorsk, book your stay and drive you — everything is on us, as in summer.", "cta1": "Book a trip", "cta2": "Winter programs",
+  "facts": [["Snowcat", "from 60,000 KZT"], ["Snowmobiles", "from 80,000 KZT"], ["Freeride", "November – April"], ["Summer 2027", "now booking"]]},
+ "block": {"eyebrow": "Winter 2026/27", "h2": "Three ways<br>up the mountain", "sub": "Snowcat and snowmobile trips are for everyone — no skiing involved. Freeride is for skiers and snowboarders.", "more": "All winter programs", "soon": "Shoot · December",
+  "cards": [["from 60,000 KZT", "By snowcat", "Up to 12 guests, about 4 hours. A pass at about 2,000 m and lunch at the top.", "winter"], ["from 80,000 KZT", "By snowmobile", "2–6 guests, two per machine. Faster, with more stops.", "winter"], ["November – April", "Freeride", "Cat skiing and snowmobile drop-offs. One day or a full week arranged.", "freeride"]]},
+ "journey": {"eyebrow": "Summer 2027 · now booking", "sub": "Summer journeys are booked months ahead. The Kazakh Altai and the east of the country, built from the places below: 3 to 7+ days, shaped to your dates and interests."}},
+"freeride": {
+ "hero": {"eyebrow": "Freeride · November – April", "h1": ["Freeride in", "*Ridder, Kazakhstan"], "sub": "Untracked powder on the ridges of the Western Altai. Up by snowcat or snowmobile, down through fresh snow. We pick you up at the airport, book your stay and drive you to the start every day.", "cta1": "Book", "cta2": "Full week", "cta2_href": "#week",
+  "facts": [["Mid-November – mid-April", "season"], ["5–10 runs", "a day"], ["Up to 12", "riders per group"]]},
+ "intro": {"eyebrow": "Two formats", "h2": "Snowcat<br>or snowmobile", "sub": "The guide picks the slopes and the number of runs to suit the group and the snow."},
+ "cards": [
+  {"pill": "Cat skiing", "meta": "Up to 10–12 riders", "title": "By snowcat", "items": ["Formatic-350 snowcat with a heated cabin", "5–8 runs a day", "Rest in the warm cabin between runs"], "price_note": "per person per day"},
+  {"pill": "Snowmobile", "meta": "Up to 6 riders", "title": "Snowmobile<br>drop-offs", "items": ["Each snowmobile takes two riders up at a time", "8–10 runs a day", "More runs and more varied lines"], "price_note": "per person per day"}],
+ "price_request": "Price on request", "cta": "Book",
+ "week": {"eyebrow": "Coming from abroad", "h2": "A full week,<br>arranged", "sub": "You book flights to Ust-Kamenogorsk; we handle the rest: pick-up, accommodation, transfers, riding and a spare day for weather. We speak English and Russian.",
+  "steps": [["Day 1", "Arrival", "Pick-up at Ust-Kamenogorsk airport (UKK), about two hours by road to Ridder, check-in."], ["Days 2–3", "Cat skiing", "Snowcat, untracked snow, 5–8 runs a day. Transfers to the start and back."], ["Days 4–5", "Snowmobiles", "Snowmobile drop-offs, 8–10 runs a day. We swap the order to match snow and weather."], ["Day 6", "Spare day", "If weather took a riding day, we ride. If not — banya, the town, rest."], ["Day 7", "Departure", "Transfer to Ust-Kamenogorsk airport."]],
+  "sum": ["7 days", "5 days in the mountains", "Plan and price worked out for your dates and group."], "note": "An example. We change the number of days and formats to suit you."},
+ "safety": {"eyebrow": "Safety", "h2": "How<br>we ride", "items": [["Guide and slope choice", "The guide checks the snow and weather and picks slopes for the group's level."], ["Avalanche gear", "Transceiver, probe, shovel and radio are available for rent on site."], ["Level", "From your first days off-piste to experienced riders — we match the slopes to the group."]]},
+ "school": {"eyebrow": "Training", "h2": "Snowmobile<br>school", "sub": "A beginner course in mountain snowmobile riding and avalanche safety, theory and practice. 3 training days, 4 nights.",
+  "rows": [["Base", "Polaris Axys snowmobile (2017), single room.", "990,000 KZT"], ["Comfort", "BRP Summit Expert snowmobile (2022), single room.", "1,210,000 KZT"]],
+  "note": "Includes the snowmobile for the whole course, avalanche gear and radio, accommodation, three meals a day, photos and video, a certificate. Transfer is extra."},
+ "media": {"eyebrow": "Season 2026/27", "h2": "From the<br>mountains", "sub": "Climbs, lines and powder — footage from this season.", "video_soon": "Film · freeride in Ridder", "photo_soon": "Shoot · season 2026/27"},
+ "faq": {"eyebrow": "Questions", "h2": "Before<br>you book", "items": [
+  ["Where is the freeride?", "Near Ridder, on the ridges of the Western Altai in East Kazakhstan. Ridder is 120 km from Ust-Kamenogorsk."],
+  ["How do I get to Ridder?", "Fly to Ust-Kamenogorsk (Oskemen, UKK) via Almaty or Astana. Ridder is about two hours by road; we pick you up at the airport."],
+  ["When is the season?", "From mid-November to mid-April, snow permitting."],
+  ["What level do I need?", "You should ski or ride confidently. The guide picks slopes for the group — from first days off-piste to steeper terrain."],
+  ["Can I rent equipment?", "Avalanche gear and radios can be rented on site. Bring your own skis or snowboard."],
+  ["Can you arrange accommodation and transfers?", "Yes. We meet you at Ust-Kamenogorsk airport, book your stay in Ridder and drive you to the start every day."]]}}
+}
