@@ -1,0 +1,8 @@
+Статья: Snowmobile freeride in Ridder: drop-offs, groups and prices
+Страница: blog/en/snowmobile-freeride-ridder.html
+
+hero.jpg — Снегоход с райдерами в лесу
+01.jpg — Райдеры с рюкзаками у снегохода
+02.jpg — Спуск по склону после заброски
+
+Все фото горизонтальные, от 1600 px по ширине, JPEG. Замените файл с тем же именем — пересборка не нужна.

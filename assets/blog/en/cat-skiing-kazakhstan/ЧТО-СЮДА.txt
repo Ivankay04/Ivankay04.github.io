@@ -1,0 +1,8 @@
+Статья: Cat skiing in Kazakhstan: what a day on a snowcat looks like
+Страница: blog/en/cat-skiing-kazakhstan.html
+
+hero.jpg — Ратрак на хребте с райдерами
+01.jpg — Райдеры выходят из ратрака наверху
+02.jpg — Спуск по целине между деревьями
+
+Все фото горизонтальные, от 1600 px по ширине, JPEG. Замените файл с тем же именем — пересборка не нужна.
