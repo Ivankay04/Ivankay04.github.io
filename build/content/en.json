@@ -26,8 +26,8 @@
    "desc": "Winter trips near Ridder from 10 December: snowcat (up to 12 guests) and snowmobiles (2–6 guests), about 4 hours in the mountains, a climb to a pass at about 2,000 m, lunch at the top. Snowcat from 60,000 KZT, snowmobiles from 80,000 KZT per person."
   },
   "freeride": {
-   "title": "Freeride & Cat Skiing in Ridder, Kazakhstan — Snowcat and Snowmobile Drop-offs | Asferia",
-   "desc": "Freeride near Ridder in the Western Altai, East Kazakhstan: cat skiing (5–8 runs a day, groups up to 12) and snowmobile drop-offs (8–10 runs a day, up to 6). Season mid-November to mid-April. Airport pick-up in Ust-Kamenogorsk, accommodation and week-long packages arranged."
+   "title": "Freeride in Kazakhstan — Snowmobile & Cat Skiing Tours in Ridder, Altai | Asferia",
+   "desc": "Freeride tours near Ridder in the Kazakh Altai: utility snowmobile drop-offs (8–10 runs a day) and Formatic-350 cat skiing (5–8 runs a day). All-inclusive tours of 3 riding days and 4 nights with lodging, meals, guide, avalanche gear and banya, from 370,000 KZT. Season mid-November to mid-April."
   }
  },
  "hero": {
@@ -81,7 +81,8 @@
   "sub": "Two seasons, two sets of programs. Each has ready routes and room to build your own.",
   "summer": {
    "when": [
-    "May – October"
+    "Summer 2027",
+    "Now booking"
    ],
    "title": "Summer",
    "items": [
@@ -94,14 +95,14 @@
   },
   "winter": {
    "when": [
-    "December – March",
+    "Winter 2026/27",
     "From 10 December"
    ],
    "title": "Winter",
    "items": [
     "Snowcat trips to a pass at about 2,000 m",
-    "Snowmobiles: two guests per machine, driven by our guides",
-    "Grilled lunch and hot tea at the top"
+    "Snowmobile tours with our guides",
+    "Freeride: snowmobile or snowcat drop-offs"
    ],
    "fine": "Snowcat from 60,000 KZT, snowmobiles from 80,000 KZT per person. No skiing involved.",
    "cta": "Winter programs"
@@ -343,19 +344,19 @@
   "cards": [
    [
     "blog/en/east-kazakhstan-travel-guide.html",
-    "assets/blog/en/east-kazakhstan-hero.jpg",
+    "assets/blog/en/east-kazakhstan-travel-guide/east-kazakhstan-hero.jpg",
     "Destination",
     "East Kazakhstan Travel Guide"
    ],
    [
     "blog/en/altai-mountains-kazakhstan.html",
-    "assets/blog/en/altai-hero.jpg",
+    "assets/blog/en/altai-mountains-kazakhstan/altai-hero.jpg",
     "Region",
     "The Altai Mountains, Kazakhstan"
    ],
    [
     "blog/en/why-kazakhstan-adventure-destination.html",
-    "assets/blog/en/why-kazakhstan-hero.jpg",
+    "assets/blog/en/why-kazakhstan-adventure-destination/why-kazakhstan-hero.jpg",
     "Perspective",
     "Why Kazakhstan Is the Next Adventure Destination"
    ]
@@ -407,10 +408,10 @@
     "Not sure yet — advise me"
    ],
    "freeride": [
-    "Cat skiing · 1 day",
-    "Snowmobile drop-offs · 1 day",
-    "Several days / full week",
-    "Snowmobile school",
+    "Snowmobile · Klimovka",
+    "Snowmobile · Vosmyorka",
+    "Snowcat · Klimovka",
+    "Snowcat · Vosmyorka",
     "Not sure yet — advise me"
    ]
   },
@@ -719,20 +720,20 @@
   "freeride_cta": {
    "eyebrow": "Do you ski or ride?",
    "h3": "Freeride in Ridder",
-   "p": "Cat skiing and snowmobile drop-offs into untracked snow. One day, or a full week with accommodation and transfers.",
+   "p": "Snowmobile or snowcat drop-offs. All-inclusive tours of 3 riding days and 4 nights.",
    "btn": "See freeride"
   }
  },
  "winter_home": {
   "hero": {
-   "eyebrow": "East Kazakhstan · Western Altai · winter 2026/27",
+   "eyebrow": "East Kazakhstan · Altai · all year",
    "h1": [
-    "The Altai",
-    "*in winter"
+    "Journeys through",
+    "*the Altai"
    ],
-   "sub": "Snowcat trips, snowmobiles and freeride near Ridder. We drive up to passes that in summer you reach on foot, and ride untracked powder. We meet you in Ust-Kamenogorsk, book your stay and drive you — everything is on us, as in summer.",
-   "cta1": "Book a trip",
-   "cta2": "Winter programs",
+   "sub": "4WD journeys across East Kazakhstan in summer; snowcat trips, snowmobiles and freeride near Ridder in winter. We meet you in Ust-Kamenogorsk, book your stay and drive you — everything is on us.",
+   "cta1": "Plan your journey",
+   "cta2": "Summer & winter",
    "facts": [
     [
      "Snowcat",
@@ -744,7 +745,7 @@
     ],
     [
      "Freeride",
-     "November – April"
+     "from 370,000 KZT"
     ],
     [
      "Summer 2027",
@@ -772,9 +773,9 @@
      "winter"
     ],
     [
-     "November – April",
+     "from 370,000 KZT",
      "Freeride",
-     "Cat skiing and snowmobile drop-offs. One day or a full week arranged.",
+     "Snowmobile or snowcat drop-offs. All-inclusive tours with 3 riding days.",
      "freeride"
     ]
    ]
@@ -791,129 +792,152 @@
     "Freeride in",
     "*Ridder, Kazakhstan"
    ],
-   "sub": "Untracked powder on the ridges of the Western Altai. Up by snowcat or snowmobile, down through fresh snow. We pick you up at the airport, book your stay and drive you to the start every day.",
-   "cta1": "Book",
-   "cta2": "Full week",
-   "cta2_href": "#week",
+   "sub": "Two ways up — utility snowmobile or a Formatic-350 snowcat. Tours of 3 riding days and 4 nights: lodging, meals, guide, avalanche gear and banya included.",
+   "cta1": "Send a request",
+   "cta2": "Tours & prices",
+   "cta2_href": "#packages",
    "facts": [
     [
      "Mid-November – mid-April",
      "season"
     ],
     [
-     "5–10 runs",
-     "a day"
+     "3 riding days",
+     "4 nights"
     ],
     [
-     "Up to 12",
-     "riders per group"
+     "From 370,000 KZT",
+     "per tour"
     ]
    ]
   },
   "intro": {
-   "eyebrow": "Two formats",
-   "h2": "Snowcat<br>or snowmobile",
-   "sub": "The guide picks the slopes and the number of runs to suit the group and the snow."
+   "eyebrow": "Drop-offs",
+   "h2": "Snowmobile<br>or snowcat",
+   "sub": "New this season: fresh slopes that most riders never reach."
   },
   "cards": [
    {
-    "pill": "Cat skiing",
-    "meta": "Up to 10–12 riders",
-    "title": "By snowcat",
+    "pill": "Utility snowmobile",
+    "meta": "Up to 6 riders",
+    "title": "Up by<br>snowmobile",
     "items": [
-     "Formatic-350 snowcat with a heated cabin",
-     "5–8 runs a day",
-     "Rest in the warm cabin between runs"
+     "8–10 runs a day",
+     "Groups of up to 6",
+     "Drop-offs by utility snowmobile"
     ],
-    "price_note": "per person per day"
+    "price": "from 640,000 KZT",
+    "price_note": "tour: 3 riding days, 4 nights"
    },
    {
-    "pill": "Snowmobile",
-    "meta": "Up to 6 riders",
-    "title": "Snowmobile<br>drop-offs",
+    "pill": "Snowcat",
+    "meta": "Up to 10–12 riders",
+    "title": "Up by<br>snowcat",
     "items": [
-     "Each snowmobile takes two riders up at a time",
-     "8–10 runs a day",
-     "More runs and more varied lines"
+     "5–8 runs a day",
+     "Groups of up to 10–12",
+     "Formatic-350 snowcat"
     ],
-    "price_note": "per person per day"
+    "price": "from 370,000 KZT",
+    "price_note": "tour: 3 riding days, 4 nights"
    }
   ],
-  "price_request": "Price on request",
-  "cta": "Book",
-  "week": {
-   "eyebrow": "Coming from abroad",
-   "h2": "A full week,<br>arranged",
-   "sub": "You book flights to Ust-Kamenogorsk; we handle the rest: pick-up, accommodation, transfers, riding and a spare day for weather. We speak English and Russian.",
-   "steps": [
+  "cta_tours": "Tours & prices",
+  "cta": "Send a request",
+  "packages": {
+   "eyebrow": "All-inclusive tours",
+   "h2": "3 riding days,<br>4 nights",
+   "sub": "Two bases to choose from — Klimovka and Vosmyorka. You stay where you start.",
+   "tours": [
+    {
+     "eyebrow": "Snowmobile drop-offs",
+     "title": "Three-day tour",
+     "inc": [
+      "Meals: breakfast, lunch box, dinner",
+      "Accommodation: a bed in a house at the base",
+      "Avalanche gear: probe, shovel, transceiver",
+      "A seat on the snowmobile",
+      "Guide",
+      "Banya"
+     ],
+     "meta": "Groups of up to 6 · runs with 4 or more",
+     "prices": [
+      [
+       "Klimovka",
+       "780,000 KZT"
+      ],
+      [
+       "Vosmyorka",
+       "640,000 KZT"
+      ]
+     ]
+    },
+    {
+     "eyebrow": "Snowcat drop-offs",
+     "title": "Three-day tour",
+     "inc": [
+      "Meals: breakfast, lunch box, dinner",
+      "Accommodation: a bed in a house at the base",
+      "Avalanche gear: probe, shovel, transceiver",
+      "A seat in the snowcat",
+      "Guide",
+      "Banya"
+     ],
+     "meta": "Groups of up to 12–14 · runs with 10 or more",
+     "prices": [
+      [
+       "Klimovka",
+       "510,000 KZT"
+      ],
+      [
+       "Vosmyorka",
+       "370,000 KZT"
+      ]
+     ]
+    }
+   ],
+   "note": "Price per person for the whole tour. Transfer from Ust-Kamenogorsk to the base and back is arranged separately."
+  },
+  "schedule": {
+   "eyebrow": "Sample program",
+   "h2": "How the<br>three days go",
+   "sub": "A sample schedule. Times can shift with the weather and the type of drop-off.",
+   "days": [
     [
      "Day 1",
      "Arrival",
-     "Pick-up at Ust-Kamenogorsk airport (UKK), about two hours by road to Ridder, check-in."
+     "13:30 — arrival at the base<br>18:00 — introductions, briefing<br>19:00 — dinner"
     ],
     [
-     "Days 2–3",
-     "Cat skiing",
-     "Snowcat, untracked snow, 5–8 runs a day. Transfers to the start and back."
+     "Days 2–4",
+     "Riding",
+     "08:00 — breakfast<br>09:00 — freeride, first session<br>12:00 — lunch<br>12:30 — freeride, second session<br>16:00 — back to the base<br>19:00 — dinner"
     ],
     [
-     "Days 4–5",
-     "Snowmobiles",
-     "Snowmobile drop-offs, 8–10 runs a day. We swap the order to match snow and weather."
-    ],
-    [
-     "Day 6",
-     "Spare day",
-     "If weather took a riding day, we ride. If not — banya, the town, rest."
-    ],
-    [
-     "Day 7",
+     "Day 5",
      "Departure",
-     "Transfer to Ust-Kamenogorsk airport."
+     "08:00 — breakfast<br>12:00 — leave the base"
     ]
    ],
-   "sum": [
-    "7 days",
-    "5 days in the mountains",
-    "Plan and price worked out for your dates and group."
-   ],
-   "note": "An example. We change the number of days and formats to suit you."
+   "note": "Three riding days: days two to four."
   },
-  "safety": {
-   "eyebrow": "Safety",
-   "h2": "How<br>we ride",
+  "why": {
+   "eyebrow": "Why here",
+   "h2": "Good<br>to know",
    "items": [
     [
-     "Guide and slope choice",
-     "The guide checks the snow and weather and picks slopes for the group's level."
+     "Easy terrain to navigate",
+     "Every run leads back to the meeting point — there is no way to get lost."
     ],
     [
-     "Avalanche gear",
-     "Transceiver, probe, shovel and radio are available for rent on site."
+     "Houses in the forest",
+     "For the whole tour you are surrounded by conifer forest, far from town."
     ],
     [
-     "Level",
-     "From your first days off-piste to experienced riders — we match the slopes to the group."
+     "Avalanche gear included",
+     "Probe, shovel and transceiver are part of the tour price."
     ]
    ]
-  },
-  "school": {
-   "eyebrow": "Training",
-   "h2": "Snowmobile<br>school",
-   "sub": "A beginner course in mountain snowmobile riding and avalanche safety, theory and practice. 3 training days, 4 nights.",
-   "rows": [
-    [
-     "Base",
-     "Polaris Axys snowmobile (2017), single room.",
-     "990,000 KZT"
-    ],
-    [
-     "Comfort",
-     "BRP Summit Expert snowmobile (2022), single room.",
-     "1,210,000 KZT"
-    ]
-   ],
-   "note": "Includes the snowmobile for the whole course, avalanche gear and radio, accommodation, three meals a day, photos and video, a certificate. Transfer is extra."
   },
   "media": {
    "eyebrow": "Season 2026/27",
@@ -928,29 +952,63 @@
    "items": [
     [
      "Where is the freeride?",
-     "Near Ridder, on the ridges of the Western Altai in East Kazakhstan. Ridder is 120 km from Ust-Kamenogorsk."
+     "Near Ridder in the Western Altai, East Kazakhstan. The bases are Klimovka and Vosmyorka. Ridder is 120 km from Ust-Kamenogorsk."
     ],
     [
-     "How do I get to Ridder?",
-     "Fly to Ust-Kamenogorsk (Oskemen, UKK) via Almaty or Astana. Ridder is about two hours by road; we pick you up at the airport."
+     "How do I get there?",
+     "Fly to Ust-Kamenogorsk (Oskemen, UKK) via Almaty or Astana. We arrange the transfer from the airport to the base and back."
     ],
     [
      "When is the season?",
-     "From mid-November to mid-April, snow permitting."
+     "From mid-November to mid-April."
     ],
     [
-     "What level do I need?",
-     "You should ski or ride confidently. The guide picks slopes for the group — from first days off-piste to steeper terrain."
+     "What is included?",
+     "A bed in a house at the base, breakfast, lunch box and dinner, a seat on the snowmobile or in the snowcat, a guide, avalanche gear (probe, shovel, transceiver) and banya."
     ],
     [
-     "Can I rent equipment?",
-     "Avalanche gear and radios can be rented on site. Bring your own skis or snowboard."
-    ],
-    [
-     "Can you arrange accommodation and transfers?",
-     "Yes. We meet you at Ust-Kamenogorsk airport, book your stay in Ridder and drive you to the start every day."
+     "How many people are needed?",
+     "Snowcat tours run with 10 or more, up to 12–14. Snowmobile tours run with 4 or more, up to 6. If there are fewer of you, write to us and we will find an option."
     ]
    ]
+  }
+ },
+ "blogui": {
+  "blog": "Journal",
+  "min": "min read",
+  "read": "Read",
+  "related": "More from the journal",
+  "en_articles": "",
+  "index_title": "Asferia Adventure Journal — East Kazakhstan, the Altai and Freeride in Ridder",
+  "index_desc": "Guides to East Kazakhstan: freeride and cat skiing in Ridder, winter in the Kazakh Altai, Katon-Karagay National Park, itineraries and practical planning.",
+  "index_eyebrow": "Journal · Asferia Adventure",
+  "index_h1": "Notes from<br>the region",
+  "index_sub": "Winter and summer in East Kazakhstan: where to go, how to get there and what to know before you arrive.",
+  "cta": {
+   "winter": {
+    "eyebrow": "Winter 2026/27",
+    "h3": "Snowcat and snowmobile trips",
+    "p": "From 10 December near Ridder. Snowcat from 60,000 KZT, snowmobiles from 80,000 KZT per person.",
+    "btn": "Winter programs"
+   },
+   "freeride": {
+    "eyebrow": "Freeride · November – April",
+    "h3": "Freeride in Ridder",
+    "p": "Snowmobile or snowcat drop-offs. Tours of 3 riding days and 4 nights from 370,000 KZT.",
+    "btn": "Tours & prices"
+   },
+   "summer": {
+    "eyebrow": "Summer 2027",
+    "h3": "Summer programs",
+    "p": "Jeep day trips from Ridder, multi-day trips and tailor-made journeys across East Kazakhstan.",
+    "btn": "Summer programs"
+   },
+   "home": {
+    "eyebrow": "Asferia Adventure",
+    "h3": "A journey through East Kazakhstan",
+    "p": "Route, vehicles, guides, hotels and permits — we arrange the whole trip.",
+    "btn": "Plan your journey"
+   }
   }
  }
 }
