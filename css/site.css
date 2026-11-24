@@ -858,3 +858,43 @@ html[lang="zh-Hans"] .art-h1{line-height:1.2!important}
 .art .pack-list li{margin-bottom:6px}
 .art .article-inner{max-width:none}
 @media(max-width:768px){.art{font-size:16px}.art-hero{min-height:56vh}.art .history,.art .story,.art .factbox{padding:18px}}
+/* ===== mobile type scale (24.11) ===== */
+@media(max-width:768px){
+ body{font-size:15px}
+ .container{padding:0 20px}
+ .section{padding:56px 0}
+ .section-head{margin-bottom:28px}
+ .section-head h2{font-size:clamp(28px,8vw,36px)}
+ .section-head .sub{font-size:14px}
+ .hero h1.hero-long,.hero h1{font-size:clamp(32px,9.5vw,44px)!important;line-height:1}
+ html[lang="zh-Hans"] .hero h1.hero-long{line-height:1.15}
+ .hero .sub{font-size:14px;line-height:1.5}
+ .hero-facts{font-size:10px;letter-spacing:.1em;gap:6px 16px;margin-top:24px}
+ .eyebrow{font-size:10px;letter-spacing:.16em}
+ .btn{padding:14px 22px;font-size:12px;letter-spacing:.14em}
+ .stats .num{font-size:44px}
+ .season{min-height:420px;padding:24px 20px}
+ .season h3{font-size:clamp(30px,8.5vw,40px)}
+ .season li{font-size:14px}
+ .stop-cta{padding:26px 22px}
+ .stop-cta h3{font-size:clamp(24px,7vw,32px)}
+ .tour-info h3,.cards .tour-info h3{font-size:20px}
+ .band h2{font-size:clamp(28px,8vw,40px)}
+ .feature h3,.step h3{font-size:19px}
+ .feature p,.step p,.day p{font-size:14px}
+ .day h4{font-size:20px}
+ .w-price b{font-size:24px}
+ .pk h3{font-size:24px}
+ .pk-row b{font-size:20px}
+ .note-card h4{font-size:17px}
+ .row h3{font-size:18px}
+ .faq summary{font-size:15px}
+ .art-h1{font-size:clamp(26px,7.4vw,34px)!important}
+ .art{font-size:15.5px;line-height:1.7}
+ .art h2{font-size:clamp(22px,6.4vw,28px);margin-top:44px}
+ .art h3{font-size:18px}
+ .jcard .tt{font-size:16px}
+ .booking h2{font-size:clamp(30px,9vw,40px)}
+ .contact h2{font-size:clamp(28px,8vw,36px)}
+ .footer .logo{font-size:18px}
+}
